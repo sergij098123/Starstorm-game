@@ -4,7 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>e:/Game Monogame/Starstorm/Starstorm/Content/pngtree-t-shirt-design-with-palm-tree-transparent-images-free-download-png-image_14554794.png</File>
+    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/pngtree-t-shirt-design-with-palm-tree-transparent-images-free-download-png-image_14554794.png</File>
   </SourceFiles>
   <DestFiles>
     <File>image.png</File>

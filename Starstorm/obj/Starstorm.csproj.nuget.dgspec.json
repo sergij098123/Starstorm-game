@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\Game Monogame\\Starstorm\\Starstorm\\Starstorm.csproj": {}
+    "D:\\Documents\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj": {}
   },
   "projects": {
-    "e:\\Game Monogame\\Starstorm\\Starstorm\\Starstorm.csproj": {
+    "D:\\Documents\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\Game Monogame\\Starstorm\\Starstorm\\Starstorm.csproj",
+        "projectUniqueName": "D:\\Documents\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
         "projectName": "Starstorm",
-        "projectPath": "e:\\Game Monogame\\Starstorm\\Starstorm\\Starstorm.csproj",
+        "projectPath": "D:\\Documents\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
         "packagesPath": "C:\\Users\\sergi\\.nuget\\packages\\",
-        "outputPath": "e:\\Game Monogame\\Starstorm\\Starstorm\\obj\\",
+        "outputPath": "D:\\Documents\\Starstorm\\Starstorm-game\\Starstorm\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -32,14 +32,7 @@ public class Game1 : Game
 
         // TODO: Add your update logic here
 
-        if (GameLogic.IsPressed(Keys.W))
-            test_pos_y -= 2;
-        if (GameLogic.IsPressed(Keys.S))
-            test_pos_y += 2;
-        if (GameLogic.IsPressed(Keys.A))
-            test_pos_x -= 2;
-        if (GameLogic.IsPressed(Keys.D))
-            test_pos_x += 2;
+        
         base.Update(gameTime);
     }
     public Texture2D _test;
