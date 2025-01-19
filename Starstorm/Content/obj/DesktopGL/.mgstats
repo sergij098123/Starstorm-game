@@ -1,2 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"e:/Game Monogame/Starstorm/Starstorm/Content/pngtree-t-shirt-design-with-palm-tree-transparent-images-free-download-png-image_14554794.png","e:/Game Monogame/Starstorm/Starstorm/Content/bin/DesktopGL/image.xnb","TextureProcessor","Texture2DContent",108480,348089,0,1627481
+"d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/BG.Left.2.png","d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/Start.FG.Left.xnb","TextureProcessor","Texture2DContent",1806,65621,0,3272787
+"d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/test_bg_sound.mp3","d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/test_bg_sound.xnb","SongProcessor","SongContent",784896,131,2,4989638

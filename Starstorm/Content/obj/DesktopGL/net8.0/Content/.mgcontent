@@ -4,9 +4,11 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/pngtree-t-shirt-design-with-palm-tree-transparent-images-free-download-png-image_14554794.png</File>
+    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/BG.Left.2.png</File>
+    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/test_bg_sound.mp3</File>
   </SourceFiles>
   <DestFiles>
-    <File>image.png</File>
+    <File>Start.FG.Left</File>
+    <File>test_bg_sound</File>
   </DestFiles>
 </SourceFileCollection>

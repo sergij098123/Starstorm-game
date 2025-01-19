@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/pngtree-t-shirt-design-with-palm-tree-transparent-images-free-download-png-image_14554794.png</SourceFile>
-  <SourceTime>2025-01-14T20:32:18+02:00</SourceTime>
-  <DestFile>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/image.xnb</DestFile>
-  <DestTime>2025-01-14T20:34:02+02:00</DestTime>
+  <SourceFile>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/BG.Left.2.png</SourceFile>
+  <SourceTime>2025-01-18T17:51:24+02:00</SourceTime>
+  <DestFile>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/Start.FG.Left.xnb</DestFile>
+  <DestTime>2025-01-19T10:32:14+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T20:05:56+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

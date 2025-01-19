@@ -13,7 +13,7 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin pngtree-t-shirt-design-with-palm-tree-transparent-images-free-download-png-image_14554794.png
+#begin BG.Left.2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -23,5 +23,11 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:pngtree-t-shirt-design-with-palm-tree-transparent-images-free-download-png-image_14554794.png;image.png
+/build:BG.Left.2.png;Start.FG.Left
+
+#begin test_bg_sound.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:test_bg_sound.mp3;test_bg_sound
 

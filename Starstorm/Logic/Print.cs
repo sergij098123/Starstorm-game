@@ -25,7 +25,7 @@ namespace Starstorm.print
         }
         public static void dialoge(string text, string speaker)
         {
-            var ScrWidth = Console.WindowWidth;
+            var ScrWidth = 100;//Console.WindowWidth;
             switch (speaker)
             {
                 case "zenon":

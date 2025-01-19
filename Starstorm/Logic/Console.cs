@@ -10,9 +10,9 @@ namespace Starstorm.console
     {
         public static void ClearLine(int Width)
         {
-            Width = Console.WindowWidth;
+            Width = 100;
             for (int i = 0; i < Width; i++) {
-                Console.SetCursorPosition(0, Console.CursorTop - 1);
+                //Console.SetCursorPosition(0, Console.CursorTop - 1);
                 Console.Write(new string(' ', Width));
             }
         }

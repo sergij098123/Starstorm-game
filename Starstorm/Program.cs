@@ -1,2 +1,2 @@
-﻿using var game = new Starstorm.Game1();
-game.Run();
+﻿using var mainMenu = new Starstorm.Game1();
+mainMenu.Run();

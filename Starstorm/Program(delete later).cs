@@ -13,16 +13,15 @@ using Starstorm.Items; // Імпортування інших файлів
 #pragma warning disable CS8601
 // Я використувую такі плагіни:
 // Better Comments
-// exe Runner
 // git Graph
 
 namespace Starstorm.Old
 {
-    static class Program
+    static class notProgram
     {
-        public static void Main() 
+        public static void NotMain() 
         {   
-            Console.OutputEncoding = System.Text.Encoding.UTF8; // Ставлення кодування на utf 8
+            ////Console.OutputEncoding = System.Text.Encoding.UTF8; // Ставлення кодування на utf 8
 
             var items = Item.Items(); // Створення предметів
             Stat.Player.Weapon.Name = items[0].Name;
