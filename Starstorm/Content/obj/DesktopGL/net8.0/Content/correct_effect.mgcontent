@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sound/Effects/correct-156911.mp3</SourceFile>
+  <SourceTime>2025-01-19T20:58:52+02:00</SourceTime>
+  <DestFile>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/correct_effect.xnb</DestFile>
+  <DestTime>2025-01-21T17:09:42+02:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2024-08-16T20:05:56+03:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2024-08-16T20:05:56+03:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

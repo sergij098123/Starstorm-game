@@ -23,11 +23,10 @@ namespace Starstorm.Old
         {   
             ////Console.OutputEncoding = System.Text.Encoding.UTF8; // Ставлення кодування на utf 8
 
-            var items = Item.Items(); // Створення предметів
-            Stat.Player.Weapon.Name = items[0].Name;
-            Stat.Player.Weapon.Damage = items[0].Damage; // Встановлення початкової зброї
-            Stat.Player.Armor.Name = items[1].Name;
-            Stat.Player.Armor.Protection = items[1].Protection; // Встановлення початкової броні
+            //Stat.Player.Weapon.Name = items[0].Name;
+            //Stat.Player.Weapon.Damage = items[0].Damage; // Встановлення початкової зброї
+            //Stat.Player.Armor.Name = items[1].Name;
+            //Stat.Player.Armor.Protection = items[1].Protection; // Встановлення початкової броні
 
             Console.WriteLine("Click to start:");
             Console.ReadLine();

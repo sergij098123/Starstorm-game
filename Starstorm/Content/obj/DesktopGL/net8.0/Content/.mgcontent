@@ -4,11 +4,13 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/BG.Left.2.png</File>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/test_bg_sound.mp3</File>
+    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sound/Effects/correct-156911.mp3</File>
+    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sound/Songs/Project_1.2.mp3</File>
+    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sprites/Start.BG.png</File>
   </SourceFiles>
   <DestFiles>
-    <File>Start.FG.Left</File>
-    <File>test_bg_sound</File>
+    <File>correct_sfx</File>
+    <File>Start.BG.Song</File>
+    <File>Start.BG.Image</File>
   </DestFiles>
 </SourceFileCollection>

@@ -1,3 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/BG.Left.2.png","d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/Start.FG.Left.xnb","TextureProcessor","Texture2DContent",1806,65621,0,3272787
-"d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/test_bg_sound.mp3","d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/test_bg_sound.xnb","SongProcessor","SongContent",784896,131,2,4989638
+"d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sound/Effects/correct-156911.mp3","d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/correct_sfx.xnb","SoundEffectProcessor","SoundEffectContent",33436,92265,0,5318911
+"d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sound/Songs/Project_1.2.mp3","d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/Start.BG.Song.xnb","SongProcessor","SongContent",317916,131,0,7076002
+"d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sprites/Start.BG.png","d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/Start.BG.Image.xnb","TextureProcessor","Texture2DContent",17731,174165,0,0969165

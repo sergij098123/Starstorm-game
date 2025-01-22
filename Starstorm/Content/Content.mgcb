@@ -13,7 +13,19 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin BG.Left.2.png
+#begin ../Sound/Effects/correct-156911.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/Effects/correct-156911.mp3;correct_sfx
+
+#begin ../Sound/Songs/Project_1.2.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:../Sound/Songs/Project_1.2.mp3;Start.BG.Song
+
+#begin ../Sprites/Start.BG.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -23,11 +35,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:BG.Left.2.png;Start.FG.Left
-
-#begin test_bg_sound.mp3
-/importer:Mp3Importer
-/processor:SongProcessor
-/processorParam:Quality=Best
-/build:test_bg_sound.mp3;test_bg_sound
+/build:../Sprites/Start.BG.png;Start.BG.Image
 

@@ -89,7 +89,6 @@ d:\Documents\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.dll
 d:\Documents\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\refint\Starstorm.dll
 d:\Documents\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.pdb
 d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\depositphotos_375777364-stock-photo-heart-pixel-art-icon-pixel.xnb
-d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.FG.Left.xnb
 d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Starstorm.exe
 d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Starstorm.deps.json
 d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Starstorm.runtimeconfig.json
@@ -107,5 +106,11 @@ d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\runtimes\win-x6
 d:\Documents\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.csproj.Up2Date
 d:\Documents\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.genruntimeconfig.cache
 d:\Documents\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\ref\Starstorm.dll
-d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\test_bg_sound.ogg
-d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\test_bg_sound.xnb
+d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\correct_sfx.ogg
+d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\correct_effect.ogg
+d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\correct_effect.xnb
+d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.BG.Song.ogg
+d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.BG.Song.xnb
+d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\correct_sfx.xnb
+d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.BG.Image.xnb
+d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.BG.xnb
