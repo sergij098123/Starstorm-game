@@ -37,3 +37,17 @@
 /processorParam:TextureFormat=Color
 /build:../Sprites/Start.BG.png;Start.BG.Image
 
+#begin Fifaks24.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fifaks24.spritefont;Fifaks24.Font
+
+#begin Fifaks92.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fifaks92.spritefont;Fifaks92.Font
+

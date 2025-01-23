@@ -244,11 +244,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
+      "projectUniqueName": "d:\\Documents\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
       "projectName": "Starstorm",
-      "projectPath": "D:\\Documents\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
+      "projectPath": "d:\\Documents\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
       "packagesPath": "C:\\Users\\sergi\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\Starstorm\\Starstorm-game\\Starstorm\\obj\\",
+      "outputPath": "d:\\Documents\\Starstorm\\Starstorm-game\\Starstorm\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

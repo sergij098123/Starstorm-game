@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Starstorm.Objects;
+using Starstorm.Fonts;
 
 namespace Starstorm.Initialize
 {

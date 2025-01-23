@@ -14,6 +14,7 @@ using Starstorm.Sound;
 using Starstorm.Objects;
 using Starstorm.Initialize;
 using System.Runtime.Serialization;
+using Starstorm.Fonts;
 
 namespace Starstorm;
 
@@ -34,10 +35,17 @@ public class Game1 : Game
     }
     private int screenWidth;
     private int screenHeight;
+    private SpriteFont Fifaks_variant;
+    private Vector2 MainMenu_Text_1_Pos;
     protected override void Initialize()
     {
         var Game1Initialize = new Game1Initialize();
+        _graphics.IsFullScreen = true;
         Game1Initialize.Main(this.Services, _graphics.GraphicsDevice);
+        Font.Fifaks24 = Content.Load<SpriteFont>("Fifaks24.Font");
+        Font.Fifaks92 = Content.Load<SpriteFont>("Fifaks92.Font");
+        Fifaks_variant = Font.Fifaks24;
+        MainMenu_Text_1_Pos = new Vector2(0, 0);
         base.Initialize();
         screenWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
         screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
@@ -51,6 +59,7 @@ public class Game1 : Game
         // Перемикаємо режим, якщо F11 натиснута, але не утримується
         if (keyboardState.IsKeyDown(Keys.F11))
         {
+            MainMenu_Text_1_Pos = new Vector2(screenWidth / 2 - Fifaks_variant.MeasureString("Starstorm").X / 2, screenHeight / 2 - Fifaks_variant.MeasureString("Starstorm").Y / 2);
             if (!_isF11Pressed)
             {
                 _isF11Pressed = true;
@@ -62,7 +71,8 @@ public class Game1 : Game
                     _graphics.IsFullScreen = true;
                     _graphics.PreferredBackBufferWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
                     _graphics.PreferredBackBufferHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
-                    StartMenu.Background.scale = GraphicsDevice.Viewport.Width / StartMenu.BackgroundSprite.texture.Width;
+                    StartMenu.Background.scale = GraphicsDevice.Adapter.CurrentDisplayMode.Width / StartMenu.BackgroundSprite.texture.Width;
+                    Fifaks_variant = Font.Fifaks92;
                 }
                 else
                 {
@@ -70,7 +80,8 @@ public class Game1 : Game
                     _graphics.IsFullScreen = false;
                     _graphics.PreferredBackBufferWidth = 800; // Стандартна ширина (замінити на бажану)
                     _graphics.PreferredBackBufferHeight = 600; // Стандартна висота (замінити на бажану)
-                    StartMenu.Background.scale = 800 / StartMenu.BackgroundSprite.texture.Width;
+                    StartMenu.Background.scale = GraphicsDevice.Viewport.Width / StartMenu.BackgroundSprite.texture.Width;
+                    Fifaks_variant = Font.Fifaks24;
                 }
 
                 _graphics.ApplyChanges();
@@ -98,8 +109,8 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.Black);
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
         StartMenu.Background.Draw(_spriteBatch);
+        _spriteBatch.DrawString(Fifaks_variant, "Starstorm", MainMenu_Text_1_Pos, Color.White);
         _spriteBatch.End();
         base.Draw(gameTime);
     }
-
 }
