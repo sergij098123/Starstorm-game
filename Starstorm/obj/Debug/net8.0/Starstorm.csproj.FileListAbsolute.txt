@@ -117,3 +117,4 @@ d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.B
 d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Fifaks.xnb
 d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Fifaks24.Font.xnb
 d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Fifaks92.Font.xnb
+d:\Documents\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Fifaks144.Font.xnb
