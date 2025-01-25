@@ -41,9 +41,6 @@ public class Game1 : Game
         var Game1Initialize = new Game1Initialize();
         _graphics.IsFullScreen = true;
         Game1Initialize.Main(this.Services, _graphics.GraphicsDevice);
-        Font.Fifaks24 = Content.Load<SpriteFont>("Fifaks24.Font");
-        Font.Fifaks92 = Content.Load<SpriteFont>("Fifaks92.Font");
-        Font.Fifaks144 = Content.Load<SpriteFont>("Fifaks144.Font");
         Font.Fifaks_variant = Font.Fifaks24;
         MainMenu_Text_1_Pos = new Vector2(0, 0);
         base.Initialize();
@@ -51,10 +48,8 @@ public class Game1 : Game
         screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
         Window.AllowUserResizing = true;
         
-        _graphics.PreferredBackBufferWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
-        _graphics.PreferredBackBufferHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
         StartMenu.Background.scale = GraphicsDevice.Adapter.CurrentDisplayMode.Width / StartMenu.BackgroundSprite.texture.Width;
-        Font.Fifaks_variant = Font.Fifaks144;
+        Font.Fifaks_variant = Font.Fifaks92;
         MainMenu_Text_1_Pos = new Vector2(screenWidth / 2 - Font.Fifaks_variant.MeasureString("Starstorm").X / 2, screenHeight / 2 - Font.Fifaks_variant.MeasureString("Starstorm").Y / 2 - screenHeight / 4);
     }
     private bool _isFullscreen = false; // Чи включено повноекранний режим
@@ -84,8 +79,8 @@ public class Game1 : Game
                 {
                     // Повернення віконного режиму
                     _graphics.IsFullScreen = false;
-                    _graphics.PreferredBackBufferWidth = 800; // Стандартна ширина (замінити на бажану)
-                    _graphics.PreferredBackBufferHeight = 600; // Стандартна висота (замінити на бажану)
+                    _graphics.PreferredBackBufferWidth = 800;
+                    _graphics.PreferredBackBufferHeight = 480;
                     StartMenu.Background.scale = GraphicsDevice.Viewport.Width / StartMenu.BackgroundSprite.texture.Width;
                     Font.Fifaks_variant = Font.Fifaks24;                
                 }
@@ -100,13 +95,11 @@ public class Game1 : Game
         }
         MainMenu_Text_1_Pos = new Vector2(screenWidth / 2 - Font.Fifaks_variant.MeasureString("Starstorm").X / 2, screenHeight / 2 - Font.Fifaks_variant.MeasureString("Starstorm").Y / 2 - screenHeight / 4);
 
-        //Console.WriteLine("X: " + Mouse.GetState().X + " Y: " + Mouse.GetState().Y);
-
-        MouseState mouse = Mouse.GetState();
-        Point mousePosition = new Point(mouse.X, mouse.Y);
-
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
+        
+        Objects.StartMenu.Button.Button1.rectangle = new Rectangle(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height / 2, Sprites.Sprites.Button.StartMenu.Frame1.texture.Width, Sprites.Sprites.Button.StartMenu.Frame1.texture.Height);
+        Objects.StartMenu.Button.Button1.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame2.texture.Width / 2, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame2.texture.Height / 2);
         base.Update(gameTime);
     }
     protected override void Draw(GameTime gameTime)
@@ -115,6 +108,8 @@ public class Game1 : Game
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
         StartMenu.Background.Draw(_spriteBatch);
         _spriteBatch.DrawString(Font.Fifaks_variant, "Starstorm", MainMenu_Text_1_Pos, Color.White);
+        Objects.StartMenu.Button.Button1.Draw(_spriteBatch);
+        _spriteBatch.DrawString(Font.Fifaks24, "Start", new Vector2(Objects.StartMenu.Button.Button1.rectangle.X + Objects.StartMenu.Button.Button1.rectangle.Width / 2 - Font.Fifaks_variant.MeasureString("Start").X / 2, Objects.StartMenu.Button.Button1.rectangle.Y + Objects.StartMenu.Button.Button1.rectangle.Height / 2 - Font.Fifaks_variant.MeasureString("Start").Y / 2), Color.White);
         _spriteBatch.End();
         base.Draw(gameTime);
     }

@@ -2,15 +2,16 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Starstorm.Sprites;
+using Starstorm.Sprite;
 
 namespace Starstorm.Objects{
     public class Object{
-        public Sprite Sprite;
+        public Sprite.Sprite Sprite;
         public Vector2 position;
         public float Rotation;
         public float scale;
         public Rectangle rectangle;
-        public Object(Vector2 position, float rotation, float scale, Rectangle rectangle, Sprite sprite){
+        public Object(Vector2 position, float rotation, float scale, Rectangle rectangle, Sprite.Sprite sprite){
             this.Sprite = sprite;
             this.position = position;
             this.scale = scale;

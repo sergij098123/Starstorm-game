@@ -1,8 +1,9 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Starstorm.Sprites;
 
-namespace Starstorm.Sprites
+namespace Starstorm.Sprite
 {
     public class Sprite{
         public Texture2D texture;
