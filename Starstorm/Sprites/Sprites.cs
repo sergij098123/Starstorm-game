@@ -11,8 +11,8 @@ namespace Starstorm.Sprites{
     class Sprites{
         public class Button{
             public class StartMenu{
-                public static Sprite.Sprite Frame1;
-                public static Sprite.Sprite Frame2;
+                public static Sprite.Sprite Frame1 = null;
+                public static Sprite.Sprite Frame2 = null;
             }
         }
         public class Button2{

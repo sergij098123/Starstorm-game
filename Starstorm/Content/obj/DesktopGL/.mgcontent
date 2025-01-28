@@ -4,16 +4,16 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sound/Effects/correct-156911.mp3</File>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sound/Songs/Project_1.2.mp3</File>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sprites/Button1_1.png</File>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sprites/Button1_2.png</File>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sprites/Button1_3.png</File>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sprites/Button1_4.png</File>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/../Sprites/Start.BG.png</File>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/Fifaks144.spritefont</File>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/Fifaks24.spritefont</File>
-    <File>d:/Documents/Starstorm/Starstorm-game/Starstorm/Content/Fifaks92.spritefont</File>
+    <File>e:/Starstorm-game/Starstorm/Content/../Sound/Effects/correct-156911.mp3</File>
+    <File>e:/Starstorm-game/Starstorm/Content/../Sound/Songs/Project_1.2.mp3</File>
+    <File>e:/Starstorm-game/Starstorm/Content/../Sprites/Button1_1.png</File>
+    <File>e:/Starstorm-game/Starstorm/Content/../Sprites/Button1_2.png</File>
+    <File>e:/Starstorm-game/Starstorm/Content/../Sprites/Button1_3.png</File>
+    <File>e:/Starstorm-game/Starstorm/Content/../Sprites/Button1_4.png</File>
+    <File>e:/Starstorm-game/Starstorm/Content/../Sprites/Start.BG.png</File>
+    <File>e:/Starstorm-game/Starstorm/Content/Fifaks144.spritefont</File>
+    <File>e:/Starstorm-game/Starstorm/Content/Fifaks24.spritefont</File>
+    <File>e:/Starstorm-game/Starstorm/Content/Fifaks92.spritefont</File>
   </SourceFiles>
   <DestFiles>
     <File>correct_sfx</File>

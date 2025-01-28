@@ -35,22 +35,32 @@ public class Game1 : Game
     }
     public int screenWidth;
     public int screenHeight;
-    public Vector2 MainMenu_Text_1_Pos;
+    public Vector2 MainMenu_Text_1_Pos = new Vector2(0, 0);
     protected override void Initialize()
     {
         var Game1Initialize = new Game1Initialize();
         _graphics.IsFullScreen = true;
-        Game1Initialize.Main(this.Services, _graphics.GraphicsDevice);
-        Font.Fifaks_variant = Font.Fifaks24;
-        MainMenu_Text_1_Pos = new Vector2(0, 0);
+        screenWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
+        screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
+
+        Font.Fifaks24 = Content.Load<SpriteFont>("Fifaks24.Font");
+        Font.Fifaks92 = Content.Load<SpriteFont>("Fifaks92.Font");
+        Font.Fifaks144 = Content.Load<SpriteFont>("Fifaks144.Font");
+        Font.Fifaks_variant = Font.Fifaks92;
+        
+        MainMenu_Text_1_Pos = new Vector2(screenWidth / 2 - Font.Fifaks_variant.MeasureString("Starstorm").X / 2, screenHeight / 2 - Font.Fifaks_variant.MeasureString("Starstorm").Y / 2 - screenHeight / 4);
+        Sprites.Sprites.Button.StartMenu.Frame1 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F1"), Color.White, SpriteEffects.None);
+        Sprites.Sprites.Button.StartMenu.Frame2 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F2"), Color.White, SpriteEffects.None);
+        Sprites.Sprites.Button2.StartMenu.Frame1 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button2.F1"), Color.White, SpriteEffects.None);
+        Sprites.Sprites.Button2.StartMenu.Frame2 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button2.F2"), Color.White, SpriteEffects.None);
         base.Initialize();
         screenWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
         screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
         Window.AllowUserResizing = true;
-        
+
+        Game1Initialize.Main(this.Services, _graphics.GraphicsDevice);
+
         StartMenu.Background.scale = GraphicsDevice.Adapter.CurrentDisplayMode.Width / StartMenu.BackgroundSprite.texture.Width;
-        Font.Fifaks_variant = Font.Fifaks92;
-        MainMenu_Text_1_Pos = new Vector2(screenWidth / 2 - Font.Fifaks_variant.MeasureString("Starstorm").X / 2, screenHeight / 2 - Font.Fifaks_variant.MeasureString("Starstorm").Y / 2 - screenHeight / 4);
     }
     private bool _isFullscreen = false; // Чи включено повноекранний режим
     private bool _isF11Pressed = false; // Чи зафіксовано натискання F11
@@ -108,8 +118,8 @@ public class Game1 : Game
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
         StartMenu.Background.Draw(_spriteBatch);
         _spriteBatch.DrawString(Font.Fifaks_variant, "Starstorm", MainMenu_Text_1_Pos, Color.White);
-        Objects.StartMenu.Button.Button1.Draw(_spriteBatch);
-        _spriteBatch.DrawString(Font.Fifaks24, "Start", new Vector2(Objects.StartMenu.Button.Button1.rectangle.X + Objects.StartMenu.Button.Button1.rectangle.Width / 2 - Font.Fifaks_variant.MeasureString("Start").X / 2, Objects.StartMenu.Button.Button1.rectangle.Y + Objects.StartMenu.Button.Button1.rectangle.Height / 2 - Font.Fifaks_variant.MeasureString("Start").Y / 2), Color.White);
+        _spriteBatch.DrawString(Font.Fifaks24, "Start", new Vector2(0, 0), Color.White);
+        StartMenu.Button.Button1.Draw(_spriteBatch);
         _spriteBatch.End();
         base.Draw(gameTime);
     }

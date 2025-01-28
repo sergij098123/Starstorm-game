@@ -17,7 +17,8 @@ namespace Starstorm.Initialize
     {
         private ContentManager Content;
         private GraphicsDevice GraphicsDevice;
-
+        public static int screenWidth;
+        public static int screenHeight;
         // Метод для ініціалізації з GraphicsDevice
         public void Main(IServiceProvider serviceProvider, GraphicsDevice graphicsDevice)
         {
@@ -30,6 +31,8 @@ namespace Starstorm.Initialize
 
             // Завантаження музики та створення об'єкта StartMenu
             var Songs = new Songs(Content, serviceProvider);
+            screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
+            screenWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
 
             StartMenu.BackgroundSprite = new Sprite.Sprite(Content.Load<Texture2D>("Start.BG.Image"), Color.White, SpriteEffects.None);
             StartMenu.Background = new Objects.Object(
@@ -44,29 +47,24 @@ namespace Starstorm.Initialize
                 StartMenu.BackgroundSprite
             );
 
-            Sprites.Sprites.Button.StartMenu.Frame1 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F1"), Color.White, SpriteEffects.None);
-            Sprites.Sprites.Button.StartMenu.Frame2 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F2"), Color.White, SpriteEffects.None);
-            Sprites.Sprites.Button2.StartMenu.Frame1 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button2.F1"), Color.White, SpriteEffects.None);
-            Sprites.Sprites.Button2.StartMenu.Frame2 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button2.F2"), Color.White, SpriteEffects.None);
+            
 
             Objects.StartMenu.Button.Button1 = new Objects.Object(
-                new Vector2(0, 0),
+                new Vector2(screenWidth / 2, screenHeight / 2),
                 0f,
-                5f,
-                new Rectangle(0, 0, 0, 0),
-                Sprites.Sprites.Button.StartMenu.Frame1
+                1f,
+                new Rectangle(0,0,0,0),
+                //new Rectangle(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height / 2, Sprites.Sprites.Button.StartMenu.Frame1.texture.Width, Sprites.Sprites.Button.StartMenu.Frame1.texture.Height),
+                //Sprites.Sprites.Button.StartMenu.Frame1
+                StartMenu.BackgroundSprite
             );
             Objects.StartMenu.Button.Button2 = new Objects.Object(
-                new Vector2(0, 0),
-                0f,
-                5f,
-                new Rectangle(0, 0, 0, 0),
+                new Vector2(screenWidth / 2, screenHeight / 2),
+                1f,
+                10f,
+                new Rectangle(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height / 2, Sprites.Sprites.Button.StartMenu.Frame1.texture.Width, Sprites.Sprites.Button.StartMenu.Frame1.texture.Height),
                 Sprites.Sprites.Button.StartMenu.Frame2
             );
-
-            Font.Fifaks24 = Content.Load<SpriteFont>("Fifaks24.Font");
-            Font.Fifaks92 = Content.Load<SpriteFont>("Fifaks92.Font");
-            Font.Fifaks144 = Content.Load<SpriteFont>("Fifaks144.Font");
 
             MediaPlayer.Play(Songs.StartMenuBackgroundMusic);
             MediaPlayer.IsRepeating = true; // Для повторення музики
