@@ -1,11 +1,1 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"E:/Starstorm-game/Starstorm/Content/../Sound/Effects/correct-156911.mp3","E:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/correct_sfx.xnb","SoundEffectProcessor","SoundEffectContent",33436,92265,0,569782
-"E:/Starstorm-game/Starstorm/Content/../Sound/Songs/Project_1.2.mp3","E:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/Start.BG.Song.xnb","SongProcessor","SongContent",317916,131,0,7678461
-"E:/Starstorm-game/Starstorm/Content/../Sprites/Button1_1.png","E:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/Start.Button.F1.xnb","TextureProcessor","Texture2DContent",295,8277,0,0650776
-"E:/Starstorm-game/Starstorm/Content/../Sprites/Button1_2.png","E:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/Start.Button.F2.xnb","TextureProcessor","Texture2DContent",294,8277,0,0044672
-"E:/Starstorm-game/Starstorm/Content/../Sprites/Button1_3.png","E:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/Start.Button2.F1.xnb","TextureProcessor","Texture2DContent",329,8277,0,0078983
-"E:/Starstorm-game/Starstorm/Content/../Sprites/Button1_4.png","E:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/Start.Button2.F2.xnb","TextureProcessor","Texture2DContent",327,8277,0,0022425
-"E:/Starstorm-game/Starstorm/Content/../Sprites/Start.BG.png","E:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/Start.BG.Image.xnb","TextureProcessor","Texture2DContent",17731,174165,0,0224045
-"E:/Starstorm-game/Starstorm/Content/Fifaks144.spritefont","E:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/Fifaks144.Font.xnb","FontDescriptionProcessor","SpriteFontContent",2079,1053730,0,3404373
-"E:/Starstorm-game/Starstorm/Content/Fifaks24.spritefont","E:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/Fifaks24.Font.xnb","FontDescriptionProcessor","SpriteFontContent",2078,37922,0,0246543
-"E:/Starstorm-game/Starstorm/Content/Fifaks92.spritefont","E:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/Fifaks92.Font.xnb","FontDescriptionProcessor","SpriteFontContent",2078,529442,0,0883714

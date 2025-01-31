@@ -44,6 +44,7 @@ public class Game1 : Game
         screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
 
         Font.Fifaks24 = Content.Load<SpriteFont>("Fifaks24.Font");
+        Font.Fifaks36 = Content.Load<SpriteFont>("Fifaks36.Font");
         Font.Fifaks92 = Content.Load<SpriteFont>("Fifaks92.Font");
         Font.Fifaks144 = Content.Load<SpriteFont>("Fifaks144.Font");
         Font.Fifaks_variant = Font.Fifaks92;
@@ -107,19 +108,28 @@ public class Game1 : Game
 
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
-        
-        Objects.StartMenu.Button.Button1.rectangle = new Rectangle(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height / 2, Sprites.Sprites.Button.StartMenu.Frame1.texture.Width, Sprites.Sprites.Button.StartMenu.Frame1.texture.Height);
-        Objects.StartMenu.Button.Button1.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame2.texture.Width / 2, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame2.texture.Height / 2);
+        //if (StartMenu.Button.Button1.rectangle.Contains(Mouse.GetState().Position) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+        //{
+        //    Effects.CorrectEffect.Play();
+        //}
         base.Update(gameTime);
     }
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.Black);
-        _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+        _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
+
         StartMenu.Background.Draw(_spriteBatch);
         _spriteBatch.DrawString(Font.Fifaks_variant, "Starstorm", MainMenu_Text_1_Pos, Color.White);
-        _spriteBatch.DrawString(Font.Fifaks24, "Start", new Vector2(0, 0), Color.White);
+
         StartMenu.Button.Button1.Draw(_spriteBatch);
+        _spriteBatch.DrawString(Font.Fifaks36, "Start", new Vector2(screenWidth / 2 - Font.Fifaks36.MeasureString("Start").X / 2 - screenWidth / 48, screenHeight / 3 - Font.Fifaks36.MeasureString("Start").Y + screenHeight / 5 + screenHeight / 25 - screenHeight / 8), Color.White);
+        StartMenu.Button.Button2.Draw(_spriteBatch);
+
+        StartMenu.Button_2.Button1.Draw(_spriteBatch);
+        _spriteBatch.DrawString(Font.Fifaks36, "Exit", new Vector2(screenWidth / 2 - Font.Fifaks36.MeasureString("Exit").X / 2 - screenWidth / 48, screenHeight / 3 - Font.Fifaks36.MeasureString("Exit").Y + screenHeight / 5 + screenHeight / 25 + screenHeight / 8 * 2.5f), Color.White);
+        StartMenu.Button_2.Button2.Draw(_spriteBatch);
+
         _spriteBatch.End();
         base.Draw(gameTime);
     }

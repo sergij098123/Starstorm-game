@@ -19,5 +19,13 @@ namespace Starstorm.Objects{
             public static Object Button1;
             public static Object Button2;
         }
+        public class Button_2{
+            public static Object Button1;
+            public static Object Button2;
+        }
+        public class Button_3{
+            public static Object Button1;
+            public static Object Button2;
+        }
     }
 }

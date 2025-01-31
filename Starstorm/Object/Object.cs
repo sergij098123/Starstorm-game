@@ -19,6 +19,7 @@ namespace Starstorm.Objects{
             this.Rotation = rotation;
         }
         public void Draw(SpriteBatch spriteBatch){
+            //spriteBatch.Begin(samplerState: SamplerState.PointClamp);
             spriteBatch.Draw(texture: Sprite.texture,   // Текстура
                 position: position,                     // Позиція
                 sourceRectangle: rectangle,             // Вся текстура
@@ -28,7 +29,8 @@ namespace Starstorm.Objects{
                 scale: scale,                           // Масштаб
                 effects: Sprite.effect,                 // Без ефектів
                 layerDepth: 0f                          // Глибина шару
-            );                      
+            );    
+            //spriteBatch.End();                  
         }
     }
 }

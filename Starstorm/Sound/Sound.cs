@@ -10,7 +10,7 @@ using System;
 namespace Starstorm.Sound{
     class Effects{
         private ContentManager Content;
-        public SoundEffect CorrectEffect;
+        public static SoundEffect CorrectEffect;
 
         public Effects(ContentManager content)
         {

@@ -34,6 +34,8 @@ namespace Starstorm.Initialize
             screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
             screenWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
 
+            Effects.CorrectEffect = Content.Load<SoundEffect>("correct_sfx");
+
             StartMenu.BackgroundSprite = new Sprite.Sprite(Content.Load<Texture2D>("Start.BG.Image"), Color.White, SpriteEffects.None);
             StartMenu.Background = new Objects.Object(
                 new Vector2(0, 0),
@@ -45,25 +47,58 @@ namespace Starstorm.Initialize
                 GraphicsDevice.Viewport.Width / (float)StartMenu.BackgroundSprite.texture.Width,    
                 new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), 
                 StartMenu.BackgroundSprite
+                //Sprites.Sprites.Button.StartMenu.Frame1
             );
 
             
 
             Objects.StartMenu.Button.Button1 = new Objects.Object(
-                new Vector2(screenWidth / 2, screenHeight / 2),
+                new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8),
                 0f,
-                1f,
-                new Rectangle(0,0,0,0),
+                3.5f,
+                new Rectangle(0,0,screenHeight,screenWidth),
                 //new Rectangle(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height / 2, Sprites.Sprites.Button.StartMenu.Frame1.texture.Width, Sprites.Sprites.Button.StartMenu.Frame1.texture.Height),
-                //Sprites.Sprites.Button.StartMenu.Frame1
-                StartMenu.BackgroundSprite
+                Sprites.Sprites.Button.StartMenu.Frame1
+                //StartMenu.BackgroundSprite
             );
+            StartMenu.Button.Button1.rectangle = new Rectangle((int)StartMenu.Button.Button1.position.X, (int)StartMenu.Button.Button1.position.Y, (int)StartMenu.Button.Button1.position.X + Sprites.Sprites.Button.StartMenu.Frame1.texture.Width * (int)StartMenu.Button.Button1.scale, (int)StartMenu.Button.Button1.position.Y + Sprites.Sprites.Button.StartMenu.Frame1.texture.Height * (int)StartMenu.Button.Button1.scale);
             Objects.StartMenu.Button.Button2 = new Objects.Object(
-                new Vector2(screenWidth / 2, screenHeight / 2),
-                1f,
-                10f,
-                new Rectangle(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height / 2, Sprites.Sprites.Button.StartMenu.Frame1.texture.Width, Sprites.Sprites.Button.StartMenu.Frame1.texture.Height),
-                Sprites.Sprites.Button.StartMenu.Frame2
+                new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8),
+                0f,
+                3.5f,
+                new Rectangle(0,0,screenHeight,screenWidth),
+                Sprites.Sprites.Button2.StartMenu.Frame1
+            );
+            StartMenu.Button.Button1.rectangle = new Rectangle((int)StartMenu.Button.Button1.position.X, (int)StartMenu.Button.Button1.position.Y, Sprites.Sprites.Button.StartMenu.Frame1.texture.Width, Sprites.Sprites.Button.StartMenu.Frame1.texture.Height);
+
+            Objects.StartMenu.Button_2.Button1 = new Objects.Object(
+                new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + screenHeight / 8 * 2.5f),
+                0f,
+                3.5f,
+                new Rectangle(0,0,screenHeight,screenWidth),
+                Sprites.Sprites.Button.StartMenu.Frame1
+            );
+            Objects.StartMenu.Button_2.Button2 = new Objects.Object(
+                new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + screenHeight / 8 * 2.5f),
+                0f,
+                3.5f,
+                new Rectangle(0,0,screenHeight,screenWidth),
+                Sprites.Sprites.Button2.StartMenu.Frame1
+            );
+
+            Objects.StartMenu.Button_3.Button1 = new Objects.Object(
+                new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8),
+                0f,
+                3.5f,
+                new Rectangle(0,0,screenHeight,screenWidth),
+                Sprites.Sprites.Button.StartMenu.Frame1
+            );
+            Objects.StartMenu.Button_3.Button2 = new Objects.Object(
+                new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8),
+                0f,
+                3.5f,
+                new Rectangle(0,0,screenHeight,screenWidth),
+                Sprites.Sprites.Button2.StartMenu.Frame1
             );
 
             MediaPlayer.Play(Songs.StartMenuBackgroundMusic);

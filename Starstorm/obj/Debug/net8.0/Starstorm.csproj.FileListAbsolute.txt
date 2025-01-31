@@ -165,3 +165,4 @@ e:\Starstorm-game\Starstorm\obj\Debug\net8.0\refint\Starstorm.dll
 e:\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.pdb
 e:\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.genruntimeconfig.cache
 e:\Starstorm-game\Starstorm\obj\Debug\net8.0\ref\Starstorm.dll
+e:\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Fifaks36.Font.xnb
