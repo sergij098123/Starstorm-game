@@ -15,6 +15,8 @@ using Starstorm.Objects;
 using Starstorm.Initialize;
 using System.Runtime.Serialization;
 using Starstorm.Fonts;
+using Starstorm.Logic.Hitboxes;
+using System.Threading;
 
 namespace Starstorm;
 
@@ -60,6 +62,7 @@ public class Game1 : Game
         Window.AllowUserResizing = true;
 
         Game1Initialize.Main(this.Services, _graphics.GraphicsDevice);
+        Initialize_Hitbox.InitializeStartMenu();
 
         StartMenu.Background.scale = GraphicsDevice.Adapter.CurrentDisplayMode.Width / StartMenu.BackgroundSprite.texture.Width;
     }
@@ -108,10 +111,38 @@ public class Game1 : Game
 
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
-        //if (StartMenu.Button.Button1.rectangle.Contains(Mouse.GetState().Position) && Mouse.GetState().LeftButton == ButtonState.Pressed)
-        //{
-        //    Effects.CorrectEffect.Play();
-        //}
+        //Console.WriteLine(StartMenu.Button.Button1.scale);
+        Initialize_Hitbox.InitializeStartMenu();
+        StartMenu.Button.Button1.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8);
+        StartMenu.Button.Button2.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8);
+        if(Hitboxes.StartMenu.Button.Button1.Contains(Mouse.GetState().Position))
+        {
+            if(StartMenu.Button.Button1.scale == 3.5f){
+                StartMenu.Button.Button1.scale = 3.65f;
+                StartMenu.Button.Button2.scale = 3.65f;
+            }
+            if(Mouse.GetState().LeftButton == ButtonState.Pressed)
+                Effects.CorrectEffect.Play();
+            //Console.WriteLine("Button1");
+        }
+        else{
+            StartMenu.Button.Button1.scale = 3.5f;
+            StartMenu.Button.Button2.scale = 3.5f;
+        }
+        if (Hitboxes.StartMenu.Button.Button2.Contains(Mouse.GetState().Position) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+        {
+            Exit();
+            if(StartMenu.Button_2.Button1.scale == 3.5f){
+                StartMenu.Button_2.Button1.scale = 3.65f;
+                StartMenu.Button_2.Button2.scale = 3.65f;
+            }
+            if(Mouse.GetState().LeftButton == ButtonState.Pressed)
+                Effects.CorrectEffect.Play();
+            //Console.WriteLine("Button1");
+        } else{
+            StartMenu.Button_2.Button1.scale = 3.5f;
+            StartMenu.Button_2.Button2.scale = 3.5f;
+        }
         base.Update(gameTime);
     }
     protected override void Draw(GameTime gameTime)

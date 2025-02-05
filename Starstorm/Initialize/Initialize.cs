@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using Starstorm.Objects;
 using Starstorm.Fonts;
+using Starstorm.Logic;
+using Starstorm.Initialize;
 
 namespace Starstorm.Initialize
 {
@@ -50,8 +52,6 @@ namespace Starstorm.Initialize
                 //Sprites.Sprites.Button.StartMenu.Frame1
             );
 
-            
-
             Objects.StartMenu.Button.Button1 = new Objects.Object(
                 new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8),
                 0f,
@@ -61,7 +61,6 @@ namespace Starstorm.Initialize
                 Sprites.Sprites.Button.StartMenu.Frame1
                 //StartMenu.BackgroundSprite
             );
-            StartMenu.Button.Button1.rectangle = new Rectangle((int)StartMenu.Button.Button1.position.X, (int)StartMenu.Button.Button1.position.Y, (int)StartMenu.Button.Button1.position.X + Sprites.Sprites.Button.StartMenu.Frame1.texture.Width * (int)StartMenu.Button.Button1.scale, (int)StartMenu.Button.Button1.position.Y + Sprites.Sprites.Button.StartMenu.Frame1.texture.Height * (int)StartMenu.Button.Button1.scale);
             Objects.StartMenu.Button.Button2 = new Objects.Object(
                 new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8),
                 0f,
@@ -69,7 +68,7 @@ namespace Starstorm.Initialize
                 new Rectangle(0,0,screenHeight,screenWidth),
                 Sprites.Sprites.Button2.StartMenu.Frame1
             );
-            StartMenu.Button.Button1.rectangle = new Rectangle((int)StartMenu.Button.Button1.position.X, (int)StartMenu.Button.Button1.position.Y, Sprites.Sprites.Button.StartMenu.Frame1.texture.Width, Sprites.Sprites.Button.StartMenu.Frame1.texture.Height);
+            
 
             Objects.StartMenu.Button_2.Button1 = new Objects.Object(
                 new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + screenHeight / 8 * 2.5f),

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>e:/Starstorm-game/Starstorm/Content/../Sprites/Button1_1.png</SourceFile>
-  <SourceTime>2025-01-31T21:52:00.8339486+02:00</SourceTime>
-  <DestFile>e:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Start.Button.F1.xnb</DestFile>
-  <DestTime>2025-01-31T21:59:38.8304175+02:00</DestTime>
+  <SourceFile>d:/Мережева папка/Starstorm/Starstorm-game/Starstorm/Content/../Sprites/Button1_1.png</SourceFile>
+  <SourceTime>2025-02-03T18:44:14.8697265+02:00</SourceTime>
+  <DestFile>d:/Мережева папка/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/Start.Button.F1.xnb</DestFile>
+  <DestTime>2025-02-05T18:49:26.5178989+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T20:05:56+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

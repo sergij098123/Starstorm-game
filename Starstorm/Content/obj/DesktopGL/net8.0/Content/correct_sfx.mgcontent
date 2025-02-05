@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>e:/Starstorm-game/Starstorm/Content/../Sound/Effects/correct-156911.mp3</SourceFile>
-  <SourceTime>2025-01-26T19:57:10.7718738+02:00</SourceTime>
-  <DestFile>e:/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/correct_sfx.xnb</DestFile>
-  <DestTime>2025-01-31T21:45:23.1701637+02:00</DestTime>
+  <SourceFile>d:/Мережева папка/Starstorm/Starstorm-game/Starstorm/Content/../Sound/Effects/correct-156911.mp3</SourceFile>
+  <SourceTime>2025-02-03T18:44:14.8697265+02:00</SourceTime>
+  <DestFile>d:/Мережева папка/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/correct_sfx.xnb</DestFile>
+  <DestTime>2025-02-05T18:17:19.0853097+02:00</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2024-08-16T20:05:56+03:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>
