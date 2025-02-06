@@ -112,37 +112,50 @@ public class Game1 : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
         //Console.WriteLine(StartMenu.Button.Button1.scale);
-        Initialize_Hitbox.InitializeStartMenu();
-        StartMenu.Button.Button1.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8);
-        StartMenu.Button.Button2.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8);
         if(Hitboxes.StartMenu.Button.Button1.Contains(Mouse.GetState().Position))
         {
             if(StartMenu.Button.Button1.scale == 3.5f){
                 StartMenu.Button.Button1.scale = 3.65f;
                 StartMenu.Button.Button2.scale = 3.65f;
             }
-            if(Mouse.GetState().LeftButton == ButtonState.Pressed)
-                Effects.CorrectEffect.Play();
+            if(Mouse.GetState().LeftButton == ButtonState.Pressed){
+                StartMenu.Button.Button1.Sprite = Sprites.Sprites.Button.StartMenu.Frame2;
+                StartMenu.Button.Button2.Sprite = Sprites.Sprites.Button2.StartMenu.Frame2;
+                //Effects.CorrectEffect.Play();
+            }
+            else{
+                StartMenu.Button.Button1.Sprite = Sprites.Sprites.Button.StartMenu.Frame1;
+                StartMenu.Button.Button2.Sprite = Sprites.Sprites.Button2.StartMenu.Frame1;
+            }
             //Console.WriteLine("Button1");
         }
         else{
             StartMenu.Button.Button1.scale = 3.5f;
             StartMenu.Button.Button2.scale = 3.5f;
         }
-        if (Hitboxes.StartMenu.Button.Button2.Contains(Mouse.GetState().Position) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+        if (Hitboxes.StartMenu.Button.Button2.Contains(Mouse.GetState().Position))
         {
-            Exit();
             if(StartMenu.Button_2.Button1.scale == 3.5f){
                 StartMenu.Button_2.Button1.scale = 3.65f;
                 StartMenu.Button_2.Button2.scale = 3.65f;
             }
-            if(Mouse.GetState().LeftButton == ButtonState.Pressed)
+            if(Mouse.GetState().LeftButton == ButtonState.Pressed){
                 Effects.CorrectEffect.Play();
+                Thread.Sleep(Effects.CorrectEffect.Duration);
+                Exit();
+            }
             //Console.WriteLine("Button1");
-        } else{
+        } 
+        else{
             StartMenu.Button_2.Button1.scale = 3.5f;
             StartMenu.Button_2.Button2.scale = 3.5f;
         }
+        StartMenu.Button.Button1.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8);
+        StartMenu.Button.Button2.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8);
+        StartMenu.Button_2.Button1.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button_2.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + screenHeight / 8 * 2.5f);
+        StartMenu.Button_2.Button2.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button_2.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + screenHeight / 8 * 2.5f);
+        
+        Initialize_Hitbox.InitializeStartMenu();
         base.Update(gameTime);
     }
     protected override void Draw(GameTime gameTime)
