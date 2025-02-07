@@ -17,6 +17,8 @@ using System.Runtime.Serialization;
 using Starstorm.Fonts;
 using Starstorm.Logic.Hitboxes;
 using System.Threading;
+using Starstorm.Draw;
+using Starstorm.Variables;
 
 namespace Starstorm;
 
@@ -35,15 +37,11 @@ public class Game1 : Game
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
     }
-    public int screenWidth;
-    public int screenHeight;
     public Vector2 MainMenu_Text_1_Pos = new Vector2(0, 0);
     protected override void Initialize()
     {
         var Game1Initialize = new Game1Initialize();
         _graphics.IsFullScreen = true;
-        screenWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
-        screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
 
         Font.Fifaks24 = Content.Load<SpriteFont>("Fifaks24.Font");
         Font.Fifaks36 = Content.Load<SpriteFont>("Fifaks36.Font");
@@ -51,17 +49,15 @@ public class Game1 : Game
         Font.Fifaks144 = Content.Load<SpriteFont>("Fifaks144.Font");
         Font.Fifaks_variant = Font.Fifaks92;
         
-        MainMenu_Text_1_Pos = new Vector2(screenWidth / 2 - Font.Fifaks_variant.MeasureString("Starstorm").X / 2, screenHeight / 2 - Font.Fifaks_variant.MeasureString("Starstorm").Y / 2 - screenHeight / 4);
+        MainMenu_Text_1_Pos = new Vector2(Var.StartMenu.Screen.width / 2 - Font.Fifaks_variant.MeasureString("Starstorm").X / 2, Var.StartMenu.Screen.height / 2 - Font.Fifaks_variant.MeasureString("Starstorm").Y / 2 - Var.StartMenu.Screen.height / 4);
         Sprites.Sprites.Button.StartMenu.Frame1 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F1"), Color.White, SpriteEffects.None);
         Sprites.Sprites.Button.StartMenu.Frame2 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F2"), Color.White, SpriteEffects.None);
         Sprites.Sprites.Button2.StartMenu.Frame1 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button2.F1"), Color.White, SpriteEffects.None);
         Sprites.Sprites.Button2.StartMenu.Frame2 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button2.F2"), Color.White, SpriteEffects.None);
         base.Initialize();
-        screenWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
-        screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
         Window.AllowUserResizing = true;
 
-        Game1Initialize.Main(this.Services, _graphics.GraphicsDevice);
+        Game1Initialize.Main(this.Services, _graphics.GraphicsDevice, _spriteBatch);
         Initialize_Hitbox.InitializeStartMenu();
 
         StartMenu.Background.scale = GraphicsDevice.Adapter.CurrentDisplayMode.Width / StartMenu.BackgroundSprite.texture.Width;
@@ -107,7 +103,7 @@ public class Game1 : Game
             // Скидаємо стан, якщо клавішу відпустили
             _isF11Pressed = false;
         }
-        MainMenu_Text_1_Pos = new Vector2(screenWidth / 2 - Font.Fifaks_variant.MeasureString("Starstorm").X / 2, screenHeight / 2 - Font.Fifaks_variant.MeasureString("Starstorm").Y / 2 - screenHeight / 4);
+        MainMenu_Text_1_Pos = new Vector2(Var.StartMenu.Screen.width / 2 - Font.Fifaks_variant.MeasureString("Starstorm").X / 2, Var.StartMenu.Screen.height / 2 - Font.Fifaks_variant.MeasureString("Starstorm").Y / 2 - Var.StartMenu.Screen.height / 4);
 
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
@@ -150,31 +146,17 @@ public class Game1 : Game
             StartMenu.Button_2.Button1.scale = 3.5f;
             StartMenu.Button_2.Button2.scale = 3.5f;
         }
-        StartMenu.Button.Button1.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8);
-        StartMenu.Button.Button2.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8);
-        StartMenu.Button_2.Button1.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button_2.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + screenHeight / 8 * 2.5f);
-        StartMenu.Button_2.Button2.position = new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button_2.Button1.scale, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + screenHeight / 8 * 2.5f);
+        StartMenu.Button.Button1.position = new Vector2(Var.StartMenu.Screen.width / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, Var.StartMenu.Screen.height / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - Var.StartMenu.Screen.height / 8);
+        StartMenu.Button.Button2.position = new Vector2(Var.StartMenu.Screen.width / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, Var.StartMenu.Screen.height / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - Var.StartMenu.Screen.height / 8);
+        StartMenu.Button_2.Button1.position = new Vector2(Var.StartMenu.Screen.width / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button_2.Button1.scale, Var.StartMenu.Screen.height / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + Var.StartMenu.Screen.height / 8 * 2.5f);
+        StartMenu.Button_2.Button2.position = new Vector2(Var.StartMenu.Screen.width / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button_2.Button1.scale, Var.StartMenu.Screen.height / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + Var.StartMenu.Screen.height / 8 * 2.5f);
         
         Initialize_Hitbox.InitializeStartMenu();
         base.Update(gameTime);
     }
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.Black);
-        _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
-
-        StartMenu.Background.Draw(_spriteBatch);
-        _spriteBatch.DrawString(Font.Fifaks_variant, "Starstorm", MainMenu_Text_1_Pos, Color.White);
-
-        StartMenu.Button.Button1.Draw(_spriteBatch);
-        _spriteBatch.DrawString(Font.Fifaks36, "Start", new Vector2(screenWidth / 2 - Font.Fifaks36.MeasureString("Start").X / 2 - screenWidth / 48, screenHeight / 3 - Font.Fifaks36.MeasureString("Start").Y + screenHeight / 5 + screenHeight / 25 - screenHeight / 8), Color.White);
-        StartMenu.Button.Button2.Draw(_spriteBatch);
-
-        StartMenu.Button_2.Button1.Draw(_spriteBatch);
-        _spriteBatch.DrawString(Font.Fifaks36, "Exit", new Vector2(screenWidth / 2 - Font.Fifaks36.MeasureString("Exit").X / 2 - screenWidth / 48, screenHeight / 3 - Font.Fifaks36.MeasureString("Exit").Y + screenHeight / 5 + screenHeight / 25 + screenHeight / 8 * 2.5f), Color.White);
-        StartMenu.Button_2.Button2.Draw(_spriteBatch);
-
-        _spriteBatch.End();
+        StartMenu_Draw.Draw(_spriteBatch, Var.StartMenu.Screen.width, Var.StartMenu.Screen.height, MainMenu_Text_1_Pos, GraphicsDevice, gameTime);
         base.Draw(gameTime);
     }
 }

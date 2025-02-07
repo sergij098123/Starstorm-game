@@ -12,6 +12,7 @@ using Starstorm.Objects;
 using Starstorm.Fonts;
 using Starstorm.Logic;
 using Starstorm.Initialize;
+using Starstorm.Variables;
 
 namespace Starstorm.Initialize
 {
@@ -22,7 +23,7 @@ namespace Starstorm.Initialize
         public static int screenWidth;
         public static int screenHeight;
         // Метод для ініціалізації з GraphicsDevice
-        public void Main(IServiceProvider serviceProvider, GraphicsDevice graphicsDevice)
+        public void Main(IServiceProvider serviceProvider, GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
         {
             // Ініціалізуємо GraphicsDevice
             GraphicsDevice = graphicsDevice;
@@ -33,8 +34,10 @@ namespace Starstorm.Initialize
 
             // Завантаження музики та створення об'єкта StartMenu
             var Songs = new Songs(Content, serviceProvider);
-            screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
+            Var.StartMenu.Screen.height = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
+            Var.StartMenu.Screen.width = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
             screenWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
+            screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
 
             Effects.CorrectEffect = Content.Load<SoundEffect>("correct_sfx");
 
