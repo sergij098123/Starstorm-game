@@ -21,8 +21,8 @@ using Starstorm.Draw;
 using Starstorm.Variables;
 
 namespace Starstorm.Draw{
-    class StartMenu_Draw{
-        public static void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight, Vector2 MainMenu_Text_1_Pos, GraphicsDevice GraphicsDevice, GameTime gameTime){
+    class StartMenuST{
+        public static void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight, Vector2 MainMenu_Text_1_Pos, GraphicsDevice GraphicsDevice){
             GraphicsDevice.Clear(Color.Black);
             _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
 

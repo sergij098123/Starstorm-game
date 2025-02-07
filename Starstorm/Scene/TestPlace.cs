@@ -18,20 +18,15 @@ using Starstorm.Fonts;
 using Starstorm.Logic.Hitboxes;
 using System.Threading;
 using Starstorm.Draw;
+using Starstorm.Variables;
+using Microsoft.Xna.Framework.Graphics.PackedVector;
 
-namespace Starstorm.Variables
-{
-    public class Var
-    {
-        public class StartMenu{
-            public static class Screen{
-                public static int width;
-                public static int height;
-            }
-            public static class Position{
-                public static Vector2 MainMenu_Text_1 = new Vector2(0, 0);
-            }
+namespace Starstorm.Draw{
+    class TestPlace{
+        public static void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice){
+            GraphicsDevice.Clear(Color.BlueViolet);
+            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
+            _spriteBatch.End();
         }
-        public static string scene = "StartMenu";
     }
 }
