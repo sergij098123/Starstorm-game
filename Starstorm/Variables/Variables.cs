@@ -33,5 +33,6 @@ namespace Starstorm.Variables
             }
         }
         public static string scene = "StartMenu";
+        public static bool isExit = false;
     }
 }

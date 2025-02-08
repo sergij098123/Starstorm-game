@@ -39,5 +39,51 @@ namespace Starstorm.Draw{
 
             _spriteBatch.End();
         }
+        public static void Update(){
+            if(Hitboxes.StartMenu.Button.Button1.Contains(Mouse.GetState().Position))
+            {
+                if(StartMenu.Button.Button1.scale == 3.5f){
+                    StartMenu.Button.Button1.scale = 3.65f;
+                    StartMenu.Button.Button2.scale = 3.65f;
+                }
+                if(Mouse.GetState().LeftButton == ButtonState.Pressed){
+                    StartMenu.Button.Button1.Sprite = Sprites.Sprites.Button.StartMenu.Frame2;
+                    StartMenu.Button.Button2.Sprite = Sprites.Sprites.Button2.StartMenu.Frame2;
+                    //Effects.CorrectEffect.Play();
+                }
+                else{
+                    StartMenu.Button.Button1.Sprite = Sprites.Sprites.Button.StartMenu.Frame1;
+                    StartMenu.Button.Button2.Sprite = Sprites.Sprites.Button2.StartMenu.Frame1;
+                }
+                //Console.WriteLine("Button1");
+            }
+            else{
+                StartMenu.Button.Button1.scale = 3.5f;
+                StartMenu.Button.Button2.scale = 3.5f;
+            }
+            if (Hitboxes.StartMenu.Button.Button2.Contains(Mouse.GetState().Position))
+            {
+                if(StartMenu.Button_2.Button1.scale == 3.5f){
+                    StartMenu.Button_2.Button1.scale = 3.65f;
+                    StartMenu.Button_2.Button2.scale = 3.65f;
+                }
+                if(Mouse.GetState().LeftButton == ButtonState.Pressed){
+                    Effects.CorrectEffect.Play();
+                    Thread.Sleep(Effects.CorrectEffect.Duration);
+                    Var.isExit = true;
+                }
+                //Console.WriteLine("Button1");
+            } 
+            else{
+                StartMenu.Button_2.Button1.scale = 3.5f;
+                StartMenu.Button_2.Button2.scale = 3.5f;
+            }
+            Var.StartMenu.Position.MainMenu_Text_1 = new Vector2(Var.StartMenu.Screen.width / 2 - Font.Fifaks_variant.MeasureString("Starstorm").X / 2, Var.StartMenu.Screen.height / 2 - Font.Fifaks_variant.MeasureString("Starstorm").Y / 2 - Var.StartMenu.Screen.height / 4);
+
+            StartMenu.Button.Button1.position = new Vector2(Var.StartMenu.Screen.width / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, Var.StartMenu.Screen.height / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - Var.StartMenu.Screen.height / 8);
+            StartMenu.Button.Button2.position = new Vector2(Var.StartMenu.Screen.width / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button.Button1.scale, Var.StartMenu.Screen.height / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - Var.StartMenu.Screen.height / 8);
+            StartMenu.Button_2.Button1.position = new Vector2(Var.StartMenu.Screen.width / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button_2.Button1.scale, Var.StartMenu.Screen.height / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + Var.StartMenu.Screen.height / 8 * 2.5f);
+            StartMenu.Button_2.Button2.position = new Vector2(Var.StartMenu.Screen.width / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * StartMenu.Button_2.Button1.scale, Var.StartMenu.Screen.height / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + Var.StartMenu.Screen.height / 8 * 2.5f);
+        }
     }
 }

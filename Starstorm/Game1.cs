@@ -68,25 +68,9 @@ public class Game1 : Game
     protected override void Update(GameTime gameTime)
     {
         KeyboardState keyboardState = Keyboard.GetState();
-        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+        
+        if (Var.isExit)
             Exit();
-        if (Hitboxes.StartMenu.Button.Button2.Contains(Mouse.GetState().Position))
-        {
-            if(StartMenu.Button_2.Button1.scale == 3.5f){
-                StartMenu.Button_2.Button1.scale = 3.65f;
-                StartMenu.Button_2.Button2.scale = 3.65f;
-            }
-            if(Mouse.GetState().LeftButton == ButtonState.Pressed){
-                Effects.CorrectEffect.Play();
-                Thread.Sleep(Effects.CorrectEffect.Duration);
-                Exit();
-            }
-            //Console.WriteLine("Button1");
-        } 
-        else{
-            StartMenu.Button_2.Button1.scale = 3.5f;
-            StartMenu.Button_2.Button2.scale = 3.5f;
-        }
         if(Keyboard.GetState().IsKeyDown(Keys.T)){
             Var.scene = "Test";
         }
@@ -95,8 +79,10 @@ public class Game1 : Game
         }
         switch(Var.scene){
             case "StartMenu":
+                StartMenuST.Update();
                 break;
             case "Test":
+                TestPlace.Update();
                 break;
             default:
                 Console.WriteLine("Error: Scene not found");

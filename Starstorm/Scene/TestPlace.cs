@@ -28,5 +28,8 @@ namespace Starstorm.Draw{
             _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
             _spriteBatch.End();
         }
+        public static void Update(){
+            Console.WriteLine("TestPlace");
+        }
     }
 }
