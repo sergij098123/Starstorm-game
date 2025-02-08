@@ -26,10 +26,17 @@ namespace Starstorm.Draw{
         public static void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice){
             GraphicsDevice.Clear(Color.BlueViolet);
             _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
+            //making grass or like it
+            for(int i = 0; i < screenWidth / 32; i++){
+                for(int j = 0; j < screenHeight / 32; j++){
+                    _spriteBatch.Draw(Sprites.Sprites.Button.StartMenu.Frame1.texture, new Vector2(i * 32, j * 32), Color.White);
+                }
+
+            }
             _spriteBatch.End();
         }
         public static void Update(){
-            Console.WriteLine("TestPlace");
+            
         }
     }
 }
