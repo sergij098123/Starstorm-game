@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8qmJTDR0ss8=",
+  "dgSpecHash": "Eno3jIUtf2M=",
   "success": true,
-  "projectFilePath": "d:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
+  "projectFilePath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sergij\\.nuget\\packages\\monogame.content.builder.task\\3.8.2.1105\\monogame.content.builder.task.3.8.2.1105.nupkg.sha512",
     "C:\\Users\\Sergij\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.2.1105\\monogame.framework.desktopgl.3.8.2.1105.nupkg.sha512",
