@@ -5,7 +5,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Starstorm.Sprites;
 using Starstorm.Logic;
-using Starstorm.Old;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Content;
@@ -24,14 +23,26 @@ using Microsoft.Xna.Framework.Graphics.PackedVector;
 namespace Starstorm.Draw{
     class TestPlace{
         public static void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice){
-            GraphicsDevice.Clear(Color.BlueViolet);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
             _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
             //making grass or like it
-            for(int i = 0; i < screenWidth / 32; i++){
-                for(int j = 0; j < screenHeight / 32; j++){
-                    _spriteBatch.Draw(Sprites.Sprites.Button.StartMenu.Frame1.texture, new Vector2(i * 32, j * 32), Color.White);
+            int[,] matrix = {
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+            };
+            for (int i = 0; i < matrix.GetLength(0); i++){
+                for (int j = 0; j < matrix.GetLength(1); j++){
+                    if (matrix[i,j] == 1){
+                        _spriteBatch.Draw(StartMenu.BackgroundSprite.texture, new Vector2(j * 50, i * 50), null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+                    }
                 }
-
             }
             _spriteBatch.End();
         }

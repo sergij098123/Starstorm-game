@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj": {}
+    "d:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj": {}
   },
   "projects": {
-    "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj": {
+    "d:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
+        "projectUniqueName": "d:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
         "projectName": "Starstorm",
-        "projectPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
+        "projectPath": "d:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
         "packagesPath": "C:\\Users\\Sergij\\.nuget\\packages\\",
-        "outputPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\obj\\",
+        "outputPath": "d:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sergij\\AppData\\Roaming\\NuGet\\NuGet.Config"
