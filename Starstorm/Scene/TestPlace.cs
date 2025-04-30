@@ -25,29 +25,17 @@ namespace Starstorm.Draw{
         public static void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice){
             GraphicsDevice.Clear(Color.CornflowerBlue);
             _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
-            //making grass or like it
-            int[,] matrix = {
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
-            };
-            for (int i = 0; i < matrix.GetLength(0); i++){
-                for (int j = 0; j < matrix.GetLength(1); j++){
-                    if (matrix[i,j] == 1){
-                        _spriteBatch.Draw(StartMenu.BackgroundSprite.texture, new Vector2(j * 50, i * 50), null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
-                    }
-                }
-            }
+            Test.BG.Draw(_spriteBatch);
             _spriteBatch.End();
         }
         public static void Update(){
             
         }
+        public static void Initialize(){
+            BG_sprite.texture = StartMenu.Background.Sprite.texture;
+            BG_sprite.Color = Color.White;
+            Test.BG = new Objects.Object(new Vector2(0, 0), 0f, 1f,new Rectangle(0, 0, Var.StartMenu.Screen.width, Var.StartMenu.Screen.height), BG_sprite);
+        }
+        public static Sprite.Sprite BG_sprite = Sprites.Sprites.Button.StartMenu.Frame1;
     }
 }

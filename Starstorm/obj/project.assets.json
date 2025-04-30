@@ -243,11 +243,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
+      "projectUniqueName": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\starstorm\\Starstorm.csproj",
       "projectName": "Starstorm",
-      "projectPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
+      "projectPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\starstorm\\Starstorm.csproj",
       "packagesPath": "C:\\Users\\Sergij\\.nuget\\packages\\",
-      "outputPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\obj\\",
+      "outputPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\starstorm\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sergij\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -273,7 +273,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -299,12 +300,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.15, 8.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.15, 8.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.15, 8.0.15]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.15, 8.0.15]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
