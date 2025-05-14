@@ -61,6 +61,8 @@ public class Game1 : Game
         Initialize_Hitbox.InitializeStartMenu();
 
         StartMenu.Background.scale = GraphicsDevice.Adapter.CurrentDisplayMode.Width / StartMenu.BackgroundSprite.texture.Width;
+        
+        TestPlace.Initialize();
     }
     private bool _isFullscreen = false; // Чи включено повноекранний режим
     private bool _isF11Pressed = false; // Чи зафіксовано натискання F11

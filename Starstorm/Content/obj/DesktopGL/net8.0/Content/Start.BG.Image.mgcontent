@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/Мережева папка/Starstorm/Starstorm-game/starstorm/Content/../Sprites/Start.BG.png</SourceFile>
+  <SourceFile>d:/Мережева папка/Starstorm/Starstorm-game/Starstorm/Content/../Sprites/Start.BG.png</SourceFile>
   <SourceTime>2025-03-18T19:07:34.95189+02:00</SourceTime>
-  <DestFile>D:/Мережева папка/Starstorm/Starstorm-game/starstorm/Content/bin/DesktopGL/Content/Start.BG.Image.xnb</DestFile>
-  <DestTime>2025-04-24T18:18:50.6456742+03:00</DestTime>
+  <DestFile>d:/Мережева папка/Starstorm/Starstorm-game/Starstorm/Content/bin/DesktopGL/Content/Start.BG.Image.xnb</DestFile>
+  <DestTime>2025-05-14T20:16:23.6166206+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T20:05:56+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

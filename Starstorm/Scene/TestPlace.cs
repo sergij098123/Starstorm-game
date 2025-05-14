@@ -32,7 +32,7 @@ namespace Starstorm.Draw{
             
         }
         public static void Initialize(){
-            BG_sprite.texture = StartMenu.Background.Sprite.texture;
+            BG_sprite.texture = StartMenu.BackgroundSprite.texture;
             BG_sprite.Color = Color.White;
             Test.BG = new Objects.Object(new Vector2(0, 0), 0f, 1f,new Rectangle(0, 0, Var.StartMenu.Screen.width, Var.StartMenu.Screen.height), BG_sprite);
         }
