@@ -62,7 +62,8 @@ public class Game1 : Game
 
         StartMenu.Background.scale = GraphicsDevice.Adapter.CurrentDisplayMode.Width / StartMenu.BackgroundSprite.texture.Width;
         
-        TestPlace.Initialize();
+        TestPlace.Initialize(Content);
+        //Sprites.Sprites.Button.StartMenu.Frame1 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F1"), Color.White, SpriteEffects.None);
     }
     private bool _isFullscreen = false; // Чи включено повноекранний режим
     private bool _isF11Pressed = false; // Чи зафіксовано натискання F11
@@ -83,7 +84,7 @@ public class Game1 : Game
                 StartMenuST.Update();
                 break;
             case "Test":
-                TestPlace.Update();
+                TestPlace.Update(gameTime);
                 break;
             default:
                 Console.WriteLine("Error: Scene not found");

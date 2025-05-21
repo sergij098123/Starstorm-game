@@ -8,11 +8,31 @@
     ".NETCoreApp,Version=v8.0": {
       "Starstorm/1.0.0": {
         "dependencies": {
+          "MonoGame.Aseprite": "6.1.0",
           "MonoGame.Content.Builder.Task": "3.8.2.1105",
           "MonoGame.Framework.DesktopGL": "3.8.2.1105"
         },
         "runtime": {
           "Starstorm.dll": {}
+        }
+      },
+      "AsepriteDotNet/1.9.0": {
+        "runtime": {
+          "lib/net8.0/AsepriteDotNet.dll": {
+            "assemblyVersion": "1.9.0.0",
+            "fileVersion": "1.9.0.0"
+          }
+        }
+      },
+      "MonoGame.Aseprite/6.1.0": {
+        "dependencies": {
+          "AsepriteDotNet": "1.9.0"
+        },
+        "runtime": {
+          "lib/net8.0/MonoGame.Aseprite.dll": {
+            "assemblyVersion": "6.1.0.0",
+            "fileVersion": "6.1.0.0"
+          }
         }
       },
       "MonoGame.Content.Builder.Task/3.8.2.1105": {},
@@ -90,6 +110,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AsepriteDotNet/1.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H1oL30bCX3OL9yKZEasflQb4VqYJso2BoFZ1zRgdV1Sd2ZgO/5cgGXTWpxWB03hQSvotyfM3svg4Wf6XVfQXGw==",
+      "path": "asepritedotnet/1.9.0",
+      "hashPath": "asepritedotnet.1.9.0.nupkg.sha512"
+    },
+    "MonoGame.Aseprite/6.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8gfWjU9UDxc4wzGvrUcdf0Dta/3TkJ/YMIuiwsCpZ5oHcoonEJ5EfnX6bhKNk0Bytz1cWYPICgdlcDVDgy2NTQ==",
+      "path": "monogame.aseprite/6.1.0",
+      "hashPath": "monogame.aseprite.6.1.0.nupkg.sha512"
     },
     "MonoGame.Content.Builder.Task/3.8.2.1105": {
       "type": "package",

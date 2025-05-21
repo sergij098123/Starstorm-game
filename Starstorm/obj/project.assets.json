@@ -2,6 +2,35 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "AsepriteDotNet/1.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AsepriteDotNet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AsepriteDotNet.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MonoGame.Aseprite/6.1.0": {
+        "type": "package",
+        "dependencies": {
+          "AsepriteDotNet": "1.9.0"
+        },
+        "compile": {
+          "lib/net8.0/MonoGame.Aseprite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MonoGame.Aseprite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MonoGame.Content.Builder.Task/3.8.2.1105": {
         "type": "package",
         "build": {
@@ -102,6 +131,39 @@
     }
   },
   "libraries": {
+    "AsepriteDotNet/1.9.0": {
+      "sha512": "H1oL30bCX3OL9yKZEasflQb4VqYJso2BoFZ1zRgdV1Sd2ZgO/5cgGXTWpxWB03hQSvotyfM3svg4Wf6XVfQXGw==",
+      "type": "package",
+      "path": "asepritedotnet/1.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "asepritedotnet.1.9.0.nupkg.sha512",
+        "asepritedotnet.nuspec",
+        "lib/net6.0/AsepriteDotNet.dll",
+        "lib/net6.0/AsepriteDotNet.xml",
+        "lib/net8.0/AsepriteDotNet.dll",
+        "lib/net8.0/AsepriteDotNet.xml",
+        "nuget-icon.png"
+      ]
+    },
+    "MonoGame.Aseprite/6.1.0": {
+      "sha512": "8gfWjU9UDxc4wzGvrUcdf0Dta/3TkJ/YMIuiwsCpZ5oHcoonEJ5EfnX6bhKNk0Bytz1cWYPICgdlcDVDgy2NTQ==",
+      "type": "package",
+      "path": "monogame.aseprite/6.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "content/Monogame.Aseprite.Content.Pipeline.dll",
+        "lib/net8.0/MonoGame.Aseprite.dll",
+        "lib/net8.0/MonoGame.Aseprite.xml",
+        "monogame.aseprite.6.1.0.nupkg.sha512",
+        "monogame.aseprite.nuspec",
+        "nuget-icon.png"
+      ]
+    },
     "MonoGame.Content.Builder.Task/3.8.2.1105": {
       "sha512": "wNlkLaITOqMs9MmCYLp3Qc7QfFng3FhIq/b+njdYV3cTVpLYgs/i56FYtJjm8jLoUA/2sJ36Qo/uqWpgW+jBuQ==",
       "type": "package",
@@ -233,6 +295,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "MonoGame.Aseprite >= 6.1.0",
       "MonoGame.Content.Builder.Task >= 3.8.2.1105",
       "MonoGame.Framework.DesktopGL >= 3.8.2.1105"
     ]
@@ -243,11 +306,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\starstorm\\Starstorm.csproj",
+      "projectUniqueName": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
       "projectName": "Starstorm",
-      "projectPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\starstorm\\Starstorm.csproj",
+      "projectPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
       "packagesPath": "C:\\Users\\Sergij\\.nuget\\packages\\",
-      "outputPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\starstorm\\obj\\",
+      "outputPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sergij\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -280,6 +343,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "MonoGame.Aseprite": {
+            "target": "Package",
+            "version": "[6.1.0, )"
+          },
           "MonoGame.Content.Builder.Task": {
             "target": "Package",
             "version": "[3.8.2.1105, )"

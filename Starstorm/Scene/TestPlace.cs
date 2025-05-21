@@ -28,12 +28,11 @@ namespace Starstorm.Draw{
             Test.BG.Draw(_spriteBatch);
             _spriteBatch.End();
         }
-        public static void Update(){
-            
+        public static void Update(GameTime gameTime){
+
         }
-        public static void Initialize(){
-            BG_sprite.texture = StartMenu.BackgroundSprite.texture;
-            BG_sprite.Color = Color.White;
+        public static void Initialize(ContentManager Content){
+            BG_sprite = new Sprite.Sprite(StartMenu.BackgroundSprite.texture, new Color(5, 6, 8), SpriteEffects.None);
             Test.BG = new Objects.Object(new Vector2(0, 0), 0f, 1f,new Rectangle(0, 0, Var.StartMenu.Screen.width, Var.StartMenu.Screen.height), BG_sprite);
         }
         public static Sprite.Sprite BG_sprite = Sprites.Sprites.Button.StartMenu.Frame1;

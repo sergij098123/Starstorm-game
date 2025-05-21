@@ -73,6 +73,18 @@
 /processorParam:TextureFormat=Color
 /build:../Sprites/Button1_4.png;Start.Button2.F2
 
+#begin ../Sprites/Free assets/Character 1/Prototype_Character/Prototype_Character.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Sprites/Free assets/Character 1/Prototype_Character/Prototype_Character.png;Character_spritesheet.png
+
 #begin ../Sprites/Start.BG.png
 /importer:TextureImporter
 /processor:TextureProcessor
