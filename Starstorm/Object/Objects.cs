@@ -28,11 +28,14 @@ namespace Starstorm.Objects{
             public static Object Button2;
         }
     }
-    public class Test{
+    public class Test
+    {
         public ContentManager Content;
-        public Test(ContentManager content){
+        public Test(ContentManager content)
+        {
             Content = content;
         }
         public static Object BG;
+        public static object Character;
     }
 }

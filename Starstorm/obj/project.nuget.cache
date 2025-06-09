@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WUBN49c7w0M=",
+  "dgSpecHash": "eTA73KS0mCk=",
   "success": true,
-  "projectFilePath": "d:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
+  "projectFilePath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sergij\\.nuget\\packages\\asepritedotnet\\1.9.0\\asepritedotnet.1.9.0.nupkg.sha512",
     "C:\\Users\\Sergij\\.nuget\\packages\\monogame.aseprite\\6.1.0\\monogame.aseprite.6.1.0.nupkg.sha512",

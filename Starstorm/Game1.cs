@@ -62,7 +62,7 @@ public class Game1 : Game
 
         StartMenu.Background.scale = GraphicsDevice.Adapter.CurrentDisplayMode.Width / StartMenu.BackgroundSprite.texture.Width;
         
-        TestPlace.Initialize(Content);
+        TestPlace.Initialize(Content, GraphicsDevice.Adapter.CurrentDisplayMode.Width, GraphicsDevice.Adapter.CurrentDisplayMode.Height, GraphicsDevice);
         //Sprites.Sprites.Button.StartMenu.Frame1 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F1"), Color.White, SpriteEffects.None);
     }
     private bool _isFullscreen = false; // Чи включено повноекранний режим
@@ -84,7 +84,7 @@ public class Game1 : Game
                 StartMenuST.Update();
                 break;
             case "Test":
-                TestPlace.Update(gameTime);
+                TestPlace.Update(gameTime, Var.StartMenu.Screen.width, Var.StartMenu.Screen.height, GraphicsDevice);
                 break;
             default:
                 Console.WriteLine("Error: Scene not found");
