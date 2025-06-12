@@ -30,18 +30,18 @@ namespace Spritesheet
         static public int frameWidth;
         static public int frameHeight;
         static public int frameCount;
-        static public int currentFrame;
+        static public int currentFrame = 0;
         static public float timer;
-        static public float frameTime = 1f;
+        static public float frameTime;
         static public int row; // якщо анімація не в першому рядку
-        public Spritesheet(Texture2D texture, Vector2 pos, int frameW, int frameH, int frameC, int currentF, int r = 0)
+        public Spritesheet(Texture2D texture, Vector2 pos, int frameW, int frameH, int frameC, float frameT = 0.5f, int r = 1)
         {
             spriteSheet = texture;
             position = pos;
             frameWidth = frameW;
             frameHeight = frameH;
             frameCount = frameC;
-            currentFrame = currentF;
+            frameTime = 1f / frameT; // час на кадр
             row = r; // рядок анімації
         }
         public static void Update(GameTime gameTime)
@@ -56,7 +56,7 @@ namespace Spritesheet
 
             Rectangle sourceRect = new Rectangle(currentFrame * frameWidth, row * frameHeight, frameWidth, frameHeight);
         }
-        public static void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight)
+        public void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight)
         {
             _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
             _spriteBatch.Draw(spriteSheet, position, new Rectangle(currentFrame * frameWidth, row * frameHeight, frameWidth, frameHeight), Color.White);

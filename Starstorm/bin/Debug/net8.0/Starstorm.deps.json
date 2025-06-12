@@ -9,7 +9,6 @@
       "Starstorm/1.0.0": {
         "dependencies": {
           "MonoGame.Aseprite": "6.1.0",
-          "MonoGame.Content.Builder.Task": "3.8.2.1105",
           "MonoGame.Framework.DesktopGL": "3.8.2.1105"
         },
         "runtime": {
@@ -35,7 +34,6 @@
           }
         }
       },
-      "MonoGame.Content.Builder.Task/3.8.2.1105": {},
       "MonoGame.Framework.DesktopGL/3.8.2.1105": {
         "dependencies": {
           "MonoGame.Library.SDL": "2.26.5.5",
@@ -85,7 +83,7 @@
           "runtimes/win-x64/native/SDL2.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "2.26.5.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -124,13 +122,6 @@
       "sha512": "sha512-8gfWjU9UDxc4wzGvrUcdf0Dta/3TkJ/YMIuiwsCpZ5oHcoonEJ5EfnX6bhKNk0Bytz1cWYPICgdlcDVDgy2NTQ==",
       "path": "monogame.aseprite/6.1.0",
       "hashPath": "monogame.aseprite.6.1.0.nupkg.sha512"
-    },
-    "MonoGame.Content.Builder.Task/3.8.2.1105": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-wNlkLaITOqMs9MmCYLp3Qc7QfFng3FhIq/b+njdYV3cTVpLYgs/i56FYtJjm8jLoUA/2sJ36Qo/uqWpgW+jBuQ==",
-      "path": "monogame.content.builder.task/3.8.2.1105",
-      "hashPath": "monogame.content.builder.task.3.8.2.1105.nupkg.sha512"
     },
     "MonoGame.Framework.DesktopGL/3.8.2.1105": {
       "type": "package",

@@ -31,13 +31,6 @@
           }
         }
       },
-      "MonoGame.Content.Builder.Task/3.8.2.1105": {
-        "type": "package",
-        "build": {
-          "build/MonoGame.Content.Builder.Task.props": {},
-          "build/MonoGame.Content.Builder.Task.targets": {}
-        }
-      },
       "MonoGame.Framework.DesktopGL/3.8.2.1105": {
         "type": "package",
         "dependencies": {
@@ -164,20 +157,6 @@
         "nuget-icon.png"
       ]
     },
-    "MonoGame.Content.Builder.Task/3.8.2.1105": {
-      "sha512": "wNlkLaITOqMs9MmCYLp3Qc7QfFng3FhIq/b+njdYV3cTVpLYgs/i56FYtJjm8jLoUA/2sJ36Qo/uqWpgW+jBuQ==",
-      "type": "package",
-      "path": "monogame.content.builder.task/3.8.2.1105",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "build/MonoGame.Content.Builder.Task.props",
-        "build/MonoGame.Content.Builder.Task.targets",
-        "monogame.content.builder.task.3.8.2.1105.nupkg.sha512",
-        "monogame.content.builder.task.nuspec"
-      ]
-    },
     "MonoGame.Framework.DesktopGL/3.8.2.1105": {
       "sha512": "QwjhmpyMZ9js4zqoYN/0cz//nYZ1u5yB8KWJ1P7nbViqfUyzuFDvGqgUEXFLp+n0Rx4z9PuKfwL5nQpp9LrXhg==",
       "type": "package",
@@ -296,24 +275,23 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "MonoGame.Aseprite >= 6.1.0",
-      "MonoGame.Content.Builder.Task >= 3.8.2.1105",
       "MonoGame.Framework.DesktopGL >= 3.8.2.1105"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sergij\\.nuget\\packages\\": {}
+    "/home/sergij/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
+      "projectUniqueName": "/media/sergij/Документи/Starstorm/Starstorm/Starstorm.csproj",
       "projectName": "Starstorm",
-      "projectPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
-      "packagesPath": "C:\\Users\\Sergij\\.nuget\\packages\\",
-      "outputPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\obj\\",
+      "projectPath": "/media/sergij/Документи/Starstorm/Starstorm/Starstorm.csproj",
+      "packagesPath": "/home/sergij/.nuget/packages/",
+      "outputPath": "/media/sergij/Документи/Starstorm/Starstorm/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sergij\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/sergij/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -337,7 +315,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -346,10 +324,6 @@
           "MonoGame.Aseprite": {
             "target": "Package",
             "version": "[6.1.0, )"
-          },
-          "MonoGame.Content.Builder.Task": {
-            "target": "Package",
-            "version": "[3.8.2.1105, )"
           },
           "MonoGame.Framework.DesktopGL": {
             "target": "Package",
@@ -370,19 +344,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.15, 8.0.15]"
+            "version": "[8.0.16, 8.0.16]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.15, 8.0.15]"
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[8.0.16, 8.0.16]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.15, 8.0.15]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.15, 8.0.15]"
+            "version": "[8.0.16, 8.0.16]"
           }
         ],
         "frameworkReferences": {
@@ -390,7 +360,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/sergij/dotnet-sdk-9.0.300-linux-x64/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,47 +1,75 @@
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\correct_effect.ogg
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\correct_effect.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\correct_sfx.ogg
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\correct_sfx.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\depositphotos_375777364-stock-photo-heart-pixel-art-icon-pixel.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Fifaks.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Fifaks144.Font.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Fifaks24.Font.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Fifaks36.Font.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Fifaks92.Font.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.BG.Image.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.BG.Song.ogg
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.BG.Song.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.BG.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.Button.F1.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.Button.F2.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.Button2.F1.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Start.Button2.F2.xnb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Starstorm.exe
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Starstorm.deps.json
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Starstorm.runtimeconfig.json
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Starstorm.dll
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Starstorm.pdb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\MonoGame.Framework.dll
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\NVorbis.dll
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\runtimes\linux-x64\native\libopenal.so.1
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\runtimes\osx\native\libopenal.1.dylib
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\runtimes\win-x64\native\soft_oal.dll
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\runtimes\win-x86\native\soft_oal.dll
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\runtimes\osx\native\libSDL2.dylib
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\runtimes\win-x64\native\SDL2.dll
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.csproj.AssemblyReference.cache
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.GeneratedMSBuildEditorConfig.editorconfig
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.AssemblyInfoInputs.cache
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.AssemblyInfo.cs
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.csproj.CoreCompileInputs.cache
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.sourcelink.json
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.csproj.Up2Date
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.dll
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\refint\Starstorm.dll
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.pdb
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\Starstorm.genruntimeconfig.cache
-D:\Мережева папка\Starstorm\Starstorm-game\Starstorm\obj\Debug\net8.0\ref\Starstorm.dll
-d:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\AsepriteDotNet.dll
-d:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\MonoGame.Aseprite.dll
-d:\Мережева папка\Starstorm\Starstorm-game\Starstorm\bin\Debug\net8.0\Content\Character_spritesheet.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/correct_effect.ogg
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/correct_effect.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/correct_sfx.ogg
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/correct_sfx.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/depositphotos_375777364-stock-photo-heart-pixel-art-icon-pixel.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Fifaks.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Fifaks144.Font.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Fifaks24.Font.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Fifaks36.Font.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Fifaks92.Font.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Start.BG.Image.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Start.BG.Song.ogg
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Start.BG.Song.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Start.BG.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Start.Button.F1.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Start.Button.F2.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Start.Button2.F1.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Start.Button2.F2.xnb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Starstorm.exe
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Starstorm.deps.json
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Starstorm.runtimeconfig.json
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Starstorm.dll
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Starstorm.pdb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/MonoGame.Framework.dll
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/NVorbis.dll
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/runtimes/linux-x64/native/libopenal.so.1
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/runtimes/osx/native/libopenal.1.dylib
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/runtimes/win-x64/native/soft_oal.dll
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/runtimes/win-x86/native/soft_oal.dll
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/runtimes/linux-x64/native/libSDL2-2.0.so.0
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/runtimes/osx/native/libSDL2.dylib
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/runtimes/win-x64/native/SDL2.dll
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/Starstorm.csproj.AssemblyReference.cache
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/Starstorm.GeneratedMSBuildEditorConfig.editorconfig
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/Starstorm.AssemblyInfoInputs.cache
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/Starstorm.AssemblyInfo.cs
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/Starstorm.csproj.CoreCompileInputs.cache
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/Starstorm.sourcelink.json
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/Starstorm.csproj.Up2Date
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/Starstorm.dll
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/refint/Starstorm.dll
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/Starstorm.pdb
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/Starstorm.genruntimeconfig.cache
+D:/Мережева папка/Starstorm/Starstorm-game/Starstorm/obj/Debug/net8.0/ref/Starstorm.dll
+d:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/AsepriteDotNet.dll
+d:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/MonoGame.Aseprite.dll
+d:/Мережева папка/Starstorm/Starstorm-game/Starstorm/bin/Debug/net8.0/Content/Character_spritesheet.xnb
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/Starstorm
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/Starstorm.deps.json
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/Starstorm.runtimeconfig.json
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/Starstorm.dll
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/Starstorm.pdb
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/AsepriteDotNet.dll
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/MonoGame.Aseprite.dll
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/MonoGame.Framework.dll
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/NVorbis.dll
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/runtimes/linux-x64/native/libopenal.so.1
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/runtimes/osx/native/libopenal.1.dylib
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/runtimes/win-x64/native/soft_oal.dll
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/runtimes/win-x86/native/soft_oal.dll
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/runtimes/linux-x64/native/libSDL2-2.0.so.0
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/runtimes/osx/native/libSDL2.dylib
+/media/sergij/Документи/Starstorm/Starstorm/bin/Debug/net8.0/runtimes/win-x64/native/SDL2.dll
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/Starstorm.csproj.AssemblyReference.cache
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/Starstorm.GeneratedMSBuildEditorConfig.editorconfig
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/Starstorm.AssemblyInfoInputs.cache
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/Starstorm.AssemblyInfo.cs
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/Starstorm.csproj.CoreCompileInputs.cache
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/Starstorm.sourcelink.json
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/Starstorm.csproj.Up2Date
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/Starstorm.dll
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/refint/Starstorm.dll
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/Starstorm.pdb
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/Starstorm.genruntimeconfig.cache
+/media/sergij/Документи/Starstorm/Starstorm/obj/Debug/net8.0/ref/Starstorm.dll

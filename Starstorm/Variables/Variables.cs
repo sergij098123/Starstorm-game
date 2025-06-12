@@ -31,6 +31,10 @@ namespace Starstorm.Variables
                 public static Vector2 MainMenu_Text_1 = new Vector2(0, 0);
             }
         }
+        public static class Test
+        {
+            public static Vector2 PlayerShift = new Vector2(0, 0);
+        }
         public static string scene = "StartMenu";
         public static bool isExit = false;
     }

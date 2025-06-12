@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj": {}
+    "/media/sergij/Документи/Starstorm/Starstorm/Starstorm.csproj": {}
   },
   "projects": {
-    "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj": {
+    "/media/sergij/Документи/Starstorm/Starstorm/Starstorm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
+        "projectUniqueName": "/media/sergij/Документи/Starstorm/Starstorm/Starstorm.csproj",
         "projectName": "Starstorm",
-        "projectPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\Starstorm.csproj",
-        "packagesPath": "C:\\Users\\Sergij\\.nuget\\packages\\",
-        "outputPath": "D:\\Мережева папка\\Starstorm\\Starstorm-game\\Starstorm\\obj\\",
+        "projectPath": "/media/sergij/Документи/Starstorm/Starstorm/Starstorm.csproj",
+        "packagesPath": "/home/sergij/.nuget/packages/",
+        "outputPath": "/media/sergij/Документи/Starstorm/Starstorm/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sergij\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/sergij/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -47,10 +47,6 @@
             "MonoGame.Aseprite": {
               "target": "Package",
               "version": "[6.1.0, )"
-            },
-            "MonoGame.Content.Builder.Task": {
-              "target": "Package",
-              "version": "[3.8.2.1105, )"
             },
             "MonoGame.Framework.DesktopGL": {
               "target": "Package",
@@ -71,19 +67,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
+              "version": "[8.0.16, 8.0.16]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.15, 8.0.15]"
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[8.0.16, 8.0.16]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.15, 8.0.15]"
+              "version": "[8.0.16, 8.0.16]"
             }
           ],
           "frameworkReferences": {
@@ -91,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/sergij/dotnet-sdk-9.0.300-linux-x64/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

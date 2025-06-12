@@ -23,7 +23,7 @@ namespace Starstorm.Objects{
         }
         public void Draw(SpriteBatch spriteBatch)
         {
-            //spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
             spriteBatch.Draw(texture: Sprite.texture,   // Текстура
                 position: position,                     // Позиція
                 sourceRectangle: rectangle,             // Вся текстура
@@ -34,7 +34,7 @@ namespace Starstorm.Objects{
                 effects: Sprite.effect,                 // Без ефектів
                 layerDepth: 0f                          // Глибина шару
             );
-            //spriteBatch.End();                  
+            spriteBatch.End();                  
         }
         public Object Get()
         {
