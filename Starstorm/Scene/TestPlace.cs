@@ -19,58 +19,66 @@ using System.Threading;
 using Starstorm.Draw;
 using Starstorm.Variables;
 using Microsoft.Xna.Framework.Graphics.PackedVector;
+using Starstorm;
 
 namespace Starstorm.Draw{
     class TestPlace
     {
-        public static void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice)
+        public void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             Test.BG.Draw(_spriteBatch);
             Charapter.Draw(_spriteBatch, screenWidth, screenHeight);
-            ((Objects.Object)Test.Character).Draw(_spriteBatch);
+            //((Objects.Object)Test.Character).Draw(_spriteBatch);
         }
-        public static void Update(GameTime gameTime, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice)
+        public void Update(GameTime gameTime, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice)
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S))
             {
-                if (((Objects.Object)Test.Character).position.Y > Var.StartMenu.Screen.height * 0.75)
-                    var.Test.PlayerShift.Y -= 10f;
+                if (Charapter.position.Y > Var.StartMenu.Screen.height * 0.75)
+                    Var.Test.PlayerShift.Y -= 10f;
                 else
-                    ((Objects.Object)Test.Character).position.Y += 10f;
+                    Charapter.position.Y += 10f;
             }
             if (Keyboard.GetState().IsKeyDown(Keys.Up) || Keyboard.GetState().IsKeyDown(Keys.W))
             {
-                if (((Objects.Object)Test.Character).position.Y < Var.StartMenu.Screen.height * 0.25)
-                    var.Test.PlayerShift.Y += 10f;
+                if (Charapter.position.Y < Var.StartMenu.Screen.height * 0.25)
+                    Var.Test.PlayerShift.Y += 10f;
                 else
-                    ((Objects.Object)Test.Character).position.Y -= 10f;
+                    Charapter.position.Y -= 10f;
             }
             if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.A))
             {
-                if (((Objects.Object)Test.Character).position.X < screenWidth * 0.25)
-                    var.Test.PlayerShift.X += 10f;
+                if (Charapter.position.X < screenWidth * 0.25)
+                    Var.Test.PlayerShift.X += 10f;
                 else
-                    ((Objects.Object)Test.Character).position.X -= 10f;
+                    Charapter.position.X -= 10f;
             }
             if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
             {
-                if (((Objects.Object)Test.Character).position.X > Var.StartMenu.Screen.width * 0.75)
-                    var.Test.PlayerShift.X -= 10f;
+                if (Charapter.position.X > Var.StartMenu.Screen.width * 0.75)
+                    Var.Test.PlayerShift.X -= 10f;
                 else
-                    ((Objects.Object)Test.Character).position.X += 10f;
+                    Charapter.position.X += 10f;
             }
+            ShiftX = Var.Test.PlayerShift.X;
+            ShiftY = Var.Test.PlayerShift.Y;
+            Test.BG.position.X = ShiftX;
+            Test.BG.position.Y = ShiftY;
+            Charapter.Update(gameTime);
         }
-        public static void Initialize(ContentManager Content, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice)
+        public void Initialize(ContentManager Content, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice)
         {
             Charapter_spritesheet = Content.Load<Texture2D>("Character_spritesheet");
-            Charapter = new Spritesheet.Spritesheet(Charapter_spritesheet, new Vector2(0, 0), 32, 32, 4, 3);
+            Charapter = new Spritesheet.Spritesheet(Charapter_spritesheet, new Vector2(0, 0), 32, 32, 2, 2f, 5, 2.5f);
             BG_sprite = new Sprite.Sprite(StartMenu.BackgroundSprite.texture, Color.White, SpriteEffects.None); //new Color(5, 6, 8)
             Test.BG = new Objects.Object(new Vector2(0, 0), 0f, screenWidth / BG_sprite.texture.Width, new Rectangle(0, 0, Var.StartMenu.Screen.width, Var.StartMenu.Screen.height), BG_sprite);
-            Test.Character = new Objects.Object(new Vector2(Var.StartMenu.Screen.width / 2, screenHeight / 2), 0f, 2f, new Rectangle(0, 0, screenWidth, screenHeight), Sprites.Sprites.Button.StartMenu.Frame1);//new Sprite.Sprite(new Texture2D(GraphicsDevice, 100, 100), Color.White, SpriteEffects.None
+            //Test.Character = new Objects.Object(new Vector2(Var.StartMenu.Screen.width / 2, screenHeight / 2), 0f, 2f, new Rectangle(0, 0, screenWidth, screenHeight), Sprites.Sprites.Button.StartMenu.Frame1);//new Sprite.Sprite(new Texture2D(GraphicsDevice, 100, 100), Color.White, SpriteEffects.None
         }
-        public static Sprite.Sprite BG_sprite = Sprites.Sprites.Button.StartMenu.Frame1;
-        public static Texture2D Charapter_spritesheet;
-        public static Spritesheet.Spritesheet Charapter;
+        public Sprite.Sprite BG_sprite = Sprites.Sprites.Button.StartMenu.Frame1;
+        public Texture2D Charapter_spritesheet;
+        public Spritesheet.Spritesheet Charapter;
+        static float ShiftX;
+        static float ShiftY;
     }
 }

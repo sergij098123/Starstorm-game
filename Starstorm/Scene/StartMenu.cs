@@ -44,12 +44,15 @@ namespace Starstorm.Draw{
                     StartMenu.Button.Button1.scale = 3.65f;
                     StartMenu.Button.Button2.scale = 3.65f;
                 }
-                if(Mouse.GetState().LeftButton == ButtonState.Pressed){
+                if (Mouse.GetState().LeftButton == ButtonState.Pressed)
+                {
                     StartMenu.Button.Button1.Sprite = Sprites.Sprites.Button.StartMenu.Frame2;
                     StartMenu.Button.Button2.Sprite = Sprites.Sprites.Button2.StartMenu.Frame2;
+                    Var.scene = "Test";
                     //Effects.CorrectEffect.Play();
                 }
-                else{
+                else
+                {
                     StartMenu.Button.Button1.Sprite = Sprites.Sprites.Button.StartMenu.Frame1;
                     StartMenu.Button.Button2.Sprite = Sprites.Sprites.Button2.StartMenu.Frame1;
                 }

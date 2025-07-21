@@ -36,8 +36,10 @@ public class Game1 : Game
     }
     protected override void LoadContent()
     {
+        TestPlace = new Starstorm.Draw.TestPlace();
         _spriteBatch = new SpriteBatch(GraphicsDevice);
     }
+    private Starstorm.Draw.TestPlace TestPlace;
     protected override void Initialize()
     {
         var Game1Initialize = new Game1Initialize();
@@ -48,7 +50,7 @@ public class Game1 : Game
         Font.Fifaks92 = Content.Load<SpriteFont>("Fifaks92.Font");
         Font.Fifaks144 = Content.Load<SpriteFont>("Fifaks144.Font");
         Font.Fifaks_variant = Font.Fifaks92;
-        
+
         Var.StartMenu.Position.MainMenu_Text_1 = new Vector2(Var.StartMenu.Screen.width / 2 - Font.Fifaks_variant.MeasureString("Starstorm").X / 2, Var.StartMenu.Screen.height / 2 - Font.Fifaks_variant.MeasureString("Starstorm").Y / 2 - Var.StartMenu.Screen.height / 4);
         Sprites.Sprites.Button.StartMenu.Frame1 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F1"), Color.White, SpriteEffects.None);
         Sprites.Sprites.Button.StartMenu.Frame2 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F2"), Color.White, SpriteEffects.None);
@@ -61,7 +63,7 @@ public class Game1 : Game
         Initialize_Hitbox.InitializeStartMenu();
 
         StartMenu.Background.scale = GraphicsDevice.Adapter.CurrentDisplayMode.Width / StartMenu.BackgroundSprite.texture.Width;
-        
+
         TestPlace.Initialize(Content, GraphicsDevice.Adapter.CurrentDisplayMode.Width, GraphicsDevice.Adapter.CurrentDisplayMode.Height, GraphicsDevice);
         //Sprites.Sprites.Button.StartMenu.Frame1 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F1"), Color.White, SpriteEffects.None);
     }
@@ -69,17 +71,21 @@ public class Game1 : Game
     private bool _isF11Pressed = false; // Чи зафіксовано натискання F11
     protected override void Update(GameTime gameTime)
     {
+        Var.GameTime = gameTime;
         KeyboardState keyboardState = Keyboard.GetState();
-        
+
         if (Var.isExit)
             Exit();
-        if(Keyboard.GetState().IsKeyDown(Keys.T)){
+        if (Keyboard.GetState().IsKeyDown(Keys.T))
+        {
             Var.scene = "Test";
         }
-        if(Keyboard.GetState().IsKeyDown(Keys.S)){
+        if (Keyboard.GetState().IsKeyDown(Keys.S))
+        {
             Var.scene = "StartMenu";
         }
-        switch(Var.scene){
+        switch (Var.scene)
+        {
             case "StartMenu":
                 StartMenuST.Update();
                 break;

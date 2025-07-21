@@ -279,19 +279,19 @@
     ]
   },
   "packageFolders": {
-    "/home/sergij/.nuget/packages/": {}
+    "C:\\Users\\sergi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/sergij/Документи/Starstorm/Starstorm/Starstorm.csproj",
+      "projectUniqueName": "D:\\Starstorm\\Starstorm\\Starstorm.csproj",
       "projectName": "Starstorm",
-      "projectPath": "/media/sergij/Документи/Starstorm/Starstorm/Starstorm.csproj",
-      "packagesPath": "/home/sergij/.nuget/packages/",
-      "outputPath": "/media/sergij/Документи/Starstorm/Starstorm/obj/",
+      "projectPath": "D:\\Starstorm\\Starstorm\\Starstorm.csproj",
+      "packagesPath": "C:\\Users\\sergi\\.nuget\\packages\\",
+      "outputPath": "D:\\Starstorm\\Starstorm\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/sergij/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\sergi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -344,15 +344,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.16, 8.0.16]"
+            "version": "[8.0.18, 8.0.18]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[8.0.16, 8.0.16]"
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.18, 8.0.18]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.16, 8.0.16]"
+            "version": "[8.0.18, 8.0.18]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.18, 8.0.18]"
           }
         ],
         "frameworkReferences": {
@@ -360,7 +364,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/sergij/dotnet-sdk-9.0.300-linux-x64/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

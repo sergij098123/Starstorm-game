@@ -22,12 +22,20 @@ namespace Starstorm.Variables
 {
     public class Var
     {
-        public class StartMenu{
-            public static class Screen{
+        public class Player
+        { 
+            
+        }
+        public static GameTime GameTime;
+        public class StartMenu
+        {
+            public static class Screen
+            {
                 public static int width;
                 public static int height;
             }
-            public static class Position{
+            public static class Position
+            {
                 public static Vector2 MainMenu_Text_1 = new Vector2(0, 0);
             }
         }

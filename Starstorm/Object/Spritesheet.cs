@@ -26,7 +26,7 @@ namespace Spritesheet
     {
         public static SpriteBatch spriteBatch;
         static public Texture2D spriteSheet;
-        static public Vector2 position;
+        public Vector2 position;
         static public int frameWidth;
         static public int frameHeight;
         static public int frameCount;
@@ -34,7 +34,8 @@ namespace Spritesheet
         static public float timer;
         static public float frameTime;
         static public int row; // якщо анімація не в першому рядку
-        public Spritesheet(Texture2D texture, Vector2 pos, int frameW, int frameH, int frameC, float frameT = 0.5f, int r = 1)
+        private float Size = 1f;
+        public Spritesheet(Texture2D texture, Vector2 pos, int frameW, int frameH, int frameC, float frameT = 0.5f, int r = 1, float sz = 1f)
         {
             spriteSheet = texture;
             position = pos;
@@ -43,8 +44,9 @@ namespace Spritesheet
             frameCount = frameC;
             frameTime = 1f / frameT; // час на кадр
             row = r; // рядок анімації
+            Size = sz;
         }
-        public static void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
             timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
@@ -59,7 +61,7 @@ namespace Spritesheet
         public void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight)
         {
             _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
-            _spriteBatch.Draw(spriteSheet, position, new Rectangle(currentFrame * frameWidth, row * frameHeight, frameWidth, frameHeight), Color.White);
+            _spriteBatch.Draw(spriteSheet, position, new Rectangle(currentFrame * frameWidth, row * frameHeight, frameWidth, frameHeight), Color.White, 0, Vector2.Zero, Size, SpriteEffects.None, 0);
             _spriteBatch.End();
         }
     }
