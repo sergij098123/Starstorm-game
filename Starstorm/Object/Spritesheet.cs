@@ -33,9 +33,10 @@ namespace Spritesheet
         static public int currentFrame = 0;
         static public float timer;
         static public float frameTime;
-        static public int row; // якщо анімація не в першому рядку
+        public int row; // якщо анімація не в першому рядку
         private float Size = 1f;
-        public Spritesheet(Texture2D texture, Vector2 pos, int frameW, int frameH, int frameC, float frameT = 0.5f, int r = 1, float sz = 1f)
+        private SpriteEffects Effect = SpriteEffects.None;
+        public Spritesheet(Texture2D texture, Vector2 pos, int frameW, int frameH, int frameC, int r, float frameT = 0.5f, float sz = 1f, SpriteEffects ef = SpriteEffects.None)
         {
             spriteSheet = texture;
             position = pos;
@@ -45,6 +46,7 @@ namespace Spritesheet
             frameTime = 1f / frameT; // час на кадр
             row = r; // рядок анімації
             Size = sz;
+            Effect = ef;
         }
         public void Update(GameTime gameTime)
         {
@@ -61,8 +63,36 @@ namespace Spritesheet
         public void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight)
         {
             _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
-            _spriteBatch.Draw(spriteSheet, position, new Rectangle(currentFrame * frameWidth, row * frameHeight, frameWidth, frameHeight), Color.White, 0, Vector2.Zero, Size, SpriteEffects.None, 0);
+            _spriteBatch.Draw(spriteSheet, position, new Rectangle(currentFrame * frameWidth, row * frameHeight, frameWidth, frameHeight), Color.White, 0, Vector2.Zero, Size, Effect, 0);
             _spriteBatch.End();
+        }
+        public int GetRow()
+        {
+            return row;
+        }
+        public void SetRow(int r)
+        {
+            row = r;
+        }
+        public int GetCount()
+        {
+            return frameCount;
+        }
+        public void SetCount(int c)
+        {
+            frameCount = c;
+        }
+        public void SetEffect(SpriteEffects ef)
+        {
+            Effect = ef;
+        }
+        public void SetCurrent(int c)
+        {
+            currentFrame = c;
+        }
+        public int GetCurrent()
+        {
+            return currentFrame;
         }
     }
 }

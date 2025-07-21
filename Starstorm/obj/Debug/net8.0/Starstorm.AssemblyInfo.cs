@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Starstorm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5b88859708102e2a05aaf70a31e963714633610")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+586ab7505d12726fb4d2bddc6a2175f5ee540b45")]
 [assembly: System.Reflection.AssemblyProductAttribute("Starstorm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Starstorm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
