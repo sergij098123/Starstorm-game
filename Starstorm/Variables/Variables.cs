@@ -26,6 +26,7 @@ namespace Starstorm.Variables
         {
             public static int direction = 1; // 0 = up, 1 = down, 2 = left, 3 = right
             public static bool isMoving = false;
+            public static Rectangle Hitbox;
         }
         public static GameTime GameTime;
         public class StartMenu

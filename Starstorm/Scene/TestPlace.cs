@@ -29,6 +29,7 @@ namespace Starstorm.Draw{
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             Test.BG.Draw(_spriteBatch);
+            Ship.Draw(_spriteBatch);
             Charapter.Draw(_spriteBatch, screenWidth, screenHeight);
             //((Objects.Object)Test.Character).Draw(_spriteBatch);
         }
@@ -43,10 +44,10 @@ namespace Starstorm.Draw{
                 Charapter.SetEffect(SpriteEffects.None);
                 if (Charapter.position.Y > Var.StartMenu.Screen.height * 0.75)
                     Var.Test.PlayerShift.Y -= Speed;
-                else
+                else if (IsColision)
                     Charapter.position.Y += Speed;
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Up) || Keyboard.GetState().IsKeyDown(Keys.W))
+            if (Keyboard.GetState().IsKeyDown(Keys.Up) || Keyboard.GetState().IsKeyDown(Keys.W))
             {
                 Var.Player.direction = 0;
                 Var.Player.isMoving = true;
@@ -55,10 +56,10 @@ namespace Starstorm.Draw{
                 Charapter.SetEffect(SpriteEffects.None);
                 if (Charapter.position.Y < Var.StartMenu.Screen.height * 0.25)
                     Var.Test.PlayerShift.Y += Speed;
-                else
+                else if (IsColision)
                     Charapter.position.Y -= Speed;
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.A))
+            if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.A))
             {
                 Var.Player.isMoving = true;
                 Charapter.SetCount(4);
@@ -67,10 +68,10 @@ namespace Starstorm.Draw{
                 Charapter.SetEffect(SpriteEffects.FlipHorizontally);
                 if (Charapter.position.X < screenWidth * 0.25)
                     Var.Test.PlayerShift.X += Speed;
-                else
+                else if (IsColision)
                     Charapter.position.X -= Speed;
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
+            if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
             {
                 Var.Player.isMoving = true;
                 Charapter.SetCount(4);
@@ -79,15 +80,13 @@ namespace Starstorm.Draw{
                 Charapter.SetEffect(SpriteEffects.None);
                 if (Charapter.position.X > Var.StartMenu.Screen.width * 0.75)
                     Var.Test.PlayerShift.X -= Speed;
-                else
+                else if (IsColision)
                     Charapter.position.X += Speed;
             }
-            else
+            if (!Var.Player.isMoving)
             {
-                if (Var.Player.isMoving)
-                    Charapter.SetCurrent(1);
-                Var.Player.isMoving = false;
                 Charapter.SetCount(2);
+                Charapter.SetCurrent(1);
                 if (Var.Player.direction == 0)
                 {
                     Charapter.SetRow(2);
@@ -109,25 +108,51 @@ namespace Starstorm.Draw{
                     Charapter.SetEffect(SpriteEffects.None);
                 }
             }
+            Var.Player.isMoving = false;
             ShiftX = Var.Test.PlayerShift.X;
             ShiftY = Var.Test.PlayerShift.Y;
+
             Test.BG.position.X = ShiftX;
             Test.BG.position.Y = ShiftY;
+
+            Ship.position.X = ShiftX;
+            Ship.position.Y = ShiftY + screenHeight / 5;
+
+            Hitbox.TestPLace.Ship.X = (int)Ship.position.X;
+            Hitbox.TestPLace.Ship.Y = (int)Ship.position.Y;
+            Hitbox.TestPLace.Ship.Width = (int)(Ship_sprite.texture.Width * Ship.scale);
+            Hitbox.TestPLace.Ship.Height = (int)(Ship_sprite.texture.Height * Ship.scale);
+
+            Var.Player.Hitbox = new Rectangle((int)Charapter.position.X, (int)Charapter.position.Y, Charapter.GetWidth(), Charapter.GetHeight());
+            if (Var.Player.Hitbox.Intersects(Ship.rectangle))
+            {
+                IsColision = true;
+            }
+            else
+            {
+                IsColision = false;
+            }
+
             Charapter.Update(gameTime);
         }
         public void Initialize(ContentManager Content, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice)
         {
+            Ship_sprite = new Sprite.Sprite(Content.Load<Texture2D>("ship_test"), Color.White, SpriteEffects.None);
+            Ship = new Objects.Object(new Vector2(0, 0), 0f, 2f, new Rectangle(0, 0, screenWidth, screenHeight), Ship_sprite);
             Charapter_spritesheet = Content.Load<Texture2D>("Character_spritesheet");
-            Charapter = new Spritesheet.Spritesheet(Charapter_spritesheet, new Vector2(screenWidth /2, screenHeight /2), 32, 32, 3, 5, 2.5f, 3f, SpriteEffects.None);
+            Charapter = new Spritesheet.Spritesheet(Charapter_spritesheet, new Vector2(screenWidth / 2, screenHeight / 2), 32, 32, 3, 5, 2.5f, 3f, SpriteEffects.None);
             BG_sprite = new Sprite.Sprite(StartMenu.BackgroundSprite.texture, Color.White, SpriteEffects.None); //new Color(5, 6, 8)
             Test.BG = new Objects.Object(new Vector2(0, 0), 0f, screenWidth / BG_sprite.texture.Width, new Rectangle(0, 0, Var.StartMenu.Screen.width, Var.StartMenu.Screen.height), BG_sprite);
             //Test.Character = new Objects.Object(new Vector2(Var.StartMenu.Screen.width / 2, screenHeight / 2), 0f, 2f, new Rectangle(0, 0, screenWidth, screenHeight), Sprites.Sprites.Button.StartMenu.Frame1);//new Sprite.Sprite(new Texture2D(GraphicsDevice, 100, 100), Color.White, SpriteEffects.None
         }
         public Sprite.Sprite BG_sprite = Sprites.Sprites.Button.StartMenu.Frame1;
+        public Sprite.Sprite Ship_sprite = null;
+        public Objects.Object Ship = null;
         public Texture2D Charapter_spritesheet;
         //0 - stands to screen, 1 - stands to right, 2 - stands to top, 3 - walk down, 4 - walk rigth, 5 - walk top
         public Spritesheet.Spritesheet Charapter;
         static float ShiftX;
         static float ShiftY;
+        bool IsColision = false;
     }
 }

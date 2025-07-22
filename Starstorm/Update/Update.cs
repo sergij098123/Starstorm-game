@@ -56,7 +56,7 @@ namespace Starstorm.Update
             else
                 _isF11Pressed = false;
             
-            Initialize_Hitbox.InitializeStartMenu();
+            Hitbox.InitializeStartMenu();
         }
     }
 }

@@ -60,7 +60,7 @@ public class Game1 : Game
         Window.AllowUserResizing = true;
 
         Game1Initialize.Main(this.Services, _graphics.GraphicsDevice, _spriteBatch);
-        Initialize_Hitbox.InitializeStartMenu();
+        Hitbox.InitializeStartMenu();
 
         StartMenu.Background.scale = GraphicsDevice.Adapter.CurrentDisplayMode.Width / StartMenu.BackgroundSprite.texture.Width;
 

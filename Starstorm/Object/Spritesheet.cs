@@ -94,5 +94,17 @@ namespace Spritesheet
         {
             return currentFrame;
         }
+        public float GetSize()
+        {
+            return Size;
+        }
+        public int GetWidth()
+        {
+            return frameWidth;
+        }
+        public int GetHeight()
+        {
+            return frameHeight;
+        }
     }
 }
