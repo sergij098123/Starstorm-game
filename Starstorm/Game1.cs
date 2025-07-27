@@ -31,7 +31,7 @@ public class Game1 : Game
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
-        Content.RootDirectory = "Content";
+        Content.RootDirectory = "win-x64/Content";
         IsMouseVisible = true;
     }
     protected override void LoadContent()

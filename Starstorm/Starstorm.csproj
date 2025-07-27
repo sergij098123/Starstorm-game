@@ -26,6 +26,16 @@
       <LogicalName>Icon.bmp</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
+  <PropertyGroup>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+    <SelfContained>true</SelfContained>
+  </PropertyGroup>
+  <ItemGroup>
+  <Content Include="Content\**\*.*">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
+</ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MonoGame.Aseprite" Version="6.1.0" />
