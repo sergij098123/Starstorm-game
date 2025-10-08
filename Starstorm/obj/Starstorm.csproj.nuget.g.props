@@ -12,10 +12,14 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\sergi\.nuget\packages\" />
   </ItemGroup>
-  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)microsoft.net.illink.tasks\8.0.18\build\Microsoft.NET.ILLink.Tasks.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.illink.tasks\8.0.18\build\Microsoft.NET.ILLink.Tasks.props')" />
-  </ImportGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_NET_ILLink_Tasks Condition=" '$(PkgMicrosoft_NET_ILLink_Tasks)' == '' ">C:\Users\sergi\.nuget\packages\microsoft.net.illink.tasks\8.0.18</PkgMicrosoft_NET_ILLink_Tasks>
-  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)monogame.framework.content.pipeline\3.8.4\contentFiles\any\net8.0\mgfxc.dll" Condition="Exists('$(NuGetPackageRoot)monogame.framework.content.pipeline\3.8.4\contentFiles\any\net8.0\mgfxc.dll')">
+      <NuGetPackageId>MonoGame.Framework.Content.Pipeline</NuGetPackageId>
+      <NuGetPackageVersion>3.8.4</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>mgfxc.dll</Link>
+    </Content>
+  </ItemGroup>
 </Project>

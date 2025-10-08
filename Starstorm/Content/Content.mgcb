@@ -1,7 +1,6 @@
-
 #----------------------------- Global Properties ----------------------------#
 
-/outputDir:../bin/Debug/net8.0/Content
+/outputDir:../bin/Debug/net9.0/Content
 /intermediateDir:obj/$(Platform)
 /platform:DesktopGL
 /config:
@@ -85,6 +84,66 @@
 /processorParam:TextureFormat=Color
 /build:../Sprites/Free assets/Character 1/Prototype_Character/Prototype_Character.png;Character_spritesheet.png
 
+#begin ../Sprites/Placeholder_1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Sprites/Placeholder_1.png;pc1.png
+
+#begin ../Sprites/Placeholder_2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Sprites/Placeholder_2.png;pc2.png
+
+#begin ../Sprites/Placeholder_3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Sprites/Placeholder_3.png;pc3.png
+
+#begin ../Sprites/Placeholder_4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Sprites/Placeholder_4.png;pc4.png
+
+#begin ../Sprites/Placeholder_5.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Sprites/Placeholder_5.png;pc5.png
+
 #begin ../Sprites/Start.BG.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -136,4 +195,3 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Fifaks92.spritefont;Fifaks92.Font
-

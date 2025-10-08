@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -19,24 +18,26 @@ using System.Threading;
 using Starstorm.Draw;
 using Starstorm.Variables;
 using Starstorm.Update;
+using Starstorm.LogF3;
 using System.Diagnostics;
+using System.IO;
 
 namespace Starstorm;
 
 public class Game1 : Game
 {
-    private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
+    private GraphicsDeviceManager _graphics = null!;
+    private SpriteBatch _spriteBatch = null!;
 
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
-        Content.RootDirectory = "win-x64/Content";
+        Content.RootDirectory = "Content";
         IsMouseVisible = true;
     }
     protected override void LoadContent()
     {
-        TestPlace = new Starstorm.Draw.TestPlace();
+        TestPlace = new TestPlace();
         _spriteBatch = new SpriteBatch(GraphicsDevice);
     }
     private Starstorm.Draw.TestPlace TestPlace;
@@ -65,25 +66,58 @@ public class Game1 : Game
         StartMenu.Background.scale = GraphicsDevice.Adapter.CurrentDisplayMode.Width / StartMenu.BackgroundSprite.texture.Width;
 
         TestPlace.Initialize(Content, GraphicsDevice.Adapter.CurrentDisplayMode.Width, GraphicsDevice.Adapter.CurrentDisplayMode.Height, GraphicsDevice);
+        Log.Print("Sucessfully initialized base of a game");
         //Sprites.Sprites.Button.StartMenu.Frame1 = new Sprite.Sprite(Content.Load<Texture2D>("Start.Button.F1"), Color.White, SpriteEffects.None);
     }
     private bool _isFullscreen = false; // Чи включено повноекранний режим
     private bool _isF11Pressed = false; // Чи зафіксовано натискання F11
+    private bool _f11PrevState = false; // Попередній стан клавіші F11
+    private int _isF3Pressed = 50; // Чи зафіксовано натискання F3
+    private KeyboardState _key;
+    private bool _isShiftPressed = false;
     protected override void Update(GameTime gameTime)
     {
         Var.GameTime = gameTime;
-        KeyboardState keyboardState = Keyboard.GetState();
+        _key = Keyboard.GetState();
 
         if (Var.isExit)
             Exit();
-        if (Keyboard.GetState().IsKeyDown(Keys.T))
+#if DEBUG
+        foreach (var key in _key.GetPressedKeys())
         {
-            Var.scene = "Test";
+            switch (key)
+            {
+                case Keys.LeftShift:
+                    _isShiftPressed = true;
+                    break;
+                case Keys.T:
+                    Var.scene = "Test";
+                    break;
+                case Keys.S:
+                    Var.scene = "StartMenu";
+                    break;
+                case Keys.F3:
+                    if (_isF3Pressed > 0)
+                    {
+                        _isF3Pressed -= 1;
+                        break;
+                    }
+                    new Log().Main();
+                    if (_isShiftPressed) Var.Test.LogText = "";
+                    _isF3Pressed = 2;
+                    break;
+            }
         }
-        if (Keyboard.GetState().IsKeyDown(Keys.S))
+#endif
+        bool f11Current = _key.IsKeyDown(Keys.F11);
+        if (f11Current && !_f11PrevState)
         {
-            Var.scene = "StartMenu";
+            _isFullscreen = !_isFullscreen;
+            _graphics.IsFullScreen = _isFullscreen;
+            _graphics.ApplyChanges();
         }
+        _f11PrevState = f11Current;
+
         switch (Var.scene)
         {
             case "StartMenu":
@@ -96,7 +130,8 @@ public class Game1 : Game
                 Console.WriteLine("Error: Scene not found");
                 break;
         }
-        STUpdate.Update(_isF11Pressed, _isFullscreen, GraphicsDevice, _graphics, Content, Window, keyboardState);
+        STUpdate.Update(_isF11Pressed, _isFullscreen, GraphicsDevice, _graphics, Content, Window, _key);
+
         base.Update(gameTime);
     }
     protected override void Draw(GameTime gameTime)
@@ -109,9 +144,12 @@ public class Game1 : Game
                 TestPlace.Draw(_spriteBatch, Var.StartMenu.Screen.width, Var.StartMenu.Screen.height, GraphicsDevice);
                 break;
             default:
-                Console.WriteLine("Error: Scene not found");
                 break;
         }
+        _spriteBatch.Begin();
+        if (Var.Test.IsLogShow)
+            _spriteBatch.DrawString(Font.Fifaks24, Var.Test.LogText, new Vector2(10, 10), Color.White);
+        _spriteBatch.End();
         base.Draw(gameTime);
     }
 }

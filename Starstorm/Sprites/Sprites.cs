@@ -7,7 +7,8 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Media;
 using System;
 
-namespace Starstorm.Sprites{
+namespace Starstorm.Sprites
+{
     class Sprites
     {
         public class Button
@@ -25,6 +26,14 @@ namespace Starstorm.Sprites{
                 public static Sprite.Sprite Frame1;
                 public static Sprite.Sprite Frame2;
             }
+        }
+        public class Placeholder
+        {
+            public static Sprite.Sprite pc1;
+            public static Sprite.Sprite pc2;
+            public static Sprite.Sprite pc3;
+            public static Sprite.Sprite pc4;
+            public static Sprite.Sprite pc5;
         }
     }
 }

@@ -28,10 +28,17 @@ namespace Starstorm.Draw{
         public void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
+
             Test.BG.Draw(_spriteBatch);
             Ship.Draw(_spriteBatch);
             Charapter.Draw(_spriteBatch, screenWidth, screenHeight);
-            //((Objects.Object)Test.Character).Draw(_spriteBatch);
+            ((Objects.Object)Placeholder.pc1).Draw(_spriteBatch);
+            ((Objects.Object)Placeholder.pc2).Draw(_spriteBatch);
+            ((Objects.Object)Placeholder.pc3).Draw(_spriteBatch);
+            ((Objects.Object)Placeholder.pc4).Draw(_spriteBatch);
+            ((Objects.Object)Placeholder.pc5).Draw(_spriteBatch);
+            _spriteBatch.End();    
         }
         public void Update(GameTime gameTime, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice)
         {
@@ -138,19 +145,33 @@ namespace Starstorm.Draw{
         public void Initialize(ContentManager Content, int screenWidth, int screenHeight, GraphicsDevice GraphicsDevice)
         {
             Ship_sprite = new Sprite.Sprite(Content.Load<Texture2D>("ship_test"), Color.White, SpriteEffects.None);
-            Ship = new Objects.Object(new Vector2(0, 0), 0f, 2f, new Rectangle(0, 0, screenWidth, screenHeight), Ship_sprite);
+            Ship = new Objects.Object(new Vector2(0, 0), 0f, 2f, Ship_sprite, new Rectangle(0, 0, screenWidth, screenHeight));
             Charapter_spritesheet = Content.Load<Texture2D>("Character_spritesheet");
             Charapter = new Spritesheet.Spritesheet(Charapter_spritesheet, new Vector2(screenWidth / 2, screenHeight / 2), 32, 32, 3, 5, 2.5f, 3f, SpriteEffects.None);
             BG_sprite = new Sprite.Sprite(StartMenu.BackgroundSprite.texture, Color.White, SpriteEffects.None); //new Color(5, 6, 8)
-            Test.BG = new Objects.Object(new Vector2(0, 0), 0f, screenWidth / BG_sprite.texture.Width, new Rectangle(0, 0, Var.StartMenu.Screen.width, Var.StartMenu.Screen.height), BG_sprite);
+
+            Sprites.Sprites.Placeholder.pc1 = new Sprite.Sprite(Content.Load<Texture2D>("pc1"), Color.White, SpriteEffects.None);
+            Sprites.Sprites.Placeholder.pc2 = new Sprite.Sprite(Content.Load<Texture2D>("pc2"), Color.White, SpriteEffects.None);
+            Sprites.Sprites.Placeholder.pc3 = new Sprite.Sprite(Content.Load<Texture2D>("pc3"), Color.White, SpriteEffects.None);
+            Sprites.Sprites.Placeholder.pc4 = new Sprite.Sprite(Content.Load<Texture2D>("pc4"), Color.White, SpriteEffects.None);
+            Sprites.Sprites.Placeholder.pc5 = new Sprite.Sprite(Content.Load<Texture2D>("pc5"), Color.White, SpriteEffects.None);
+
+            Placeholder.pc1 = new Objects.Object(new Vector2(0, 0), 0f, 1.5f, Sprites.Sprites.Placeholder.pc1, new Rectangle(0, 0, screenWidth, screenHeight));
+            Placeholder.pc2 = new Objects.Object(new Vector2(0, 0), 0f, 1.5f, (Sprite.Sprite)Sprites.Sprites.Placeholder.pc2);
+            Placeholder.pc3 = new Objects.Object(new Vector2(0, 0), 0f, 1.5f, (Sprite.Sprite)Sprites.Sprites.Placeholder.pc3);
+            Placeholder.pc4 = new Objects.Object(new Vector2(0, 0), 0f, 1.5f, (Sprite.Sprite)Sprites.Sprites.Placeholder.pc4);
+            Placeholder.pc5 = new Objects.Object(new Vector2(0, 0), 0f, 1.5f, (Sprite.Sprite)Sprites.Sprites.Placeholder.pc5);
+
+            Test.BG = new Objects.Object(new Vector2(0, 0), 0f, screenWidth / BG_sprite.texture.Width, BG_sprite, new Rectangle(0, 0, Var.StartMenu.Screen.width, Var.StartMenu.Screen.height));
             //Test.Character = new Objects.Object(new Vector2(Var.StartMenu.Screen.width / 2, screenHeight / 2), 0f, 2f, new Rectangle(0, 0, screenWidth, screenHeight), Sprites.Sprites.Button.StartMenu.Frame1);//new Sprite.Sprite(new Texture2D(GraphicsDevice, 100, 100), Color.White, SpriteEffects.None
+            Console.WriteLine($"pc1 texture size: {Sprites.Sprites.Placeholder.pc1.texture.Width}x{Sprites.Sprites.Placeholder.pc1.texture.Height}");
         }
         public Sprite.Sprite BG_sprite = Sprites.Sprites.Button.StartMenu.Frame1;
-        public Sprite.Sprite Ship_sprite = null;
-        public Objects.Object Ship = null;
-        public Texture2D Charapter_spritesheet;
+        public Sprite.Sprite Ship_sprite = null!;
+        public Objects.Object Ship = null!;
+        public Texture2D Charapter_spritesheet = null!;
         //0 - stands to screen, 1 - stands to right, 2 - stands to top, 3 - walk down, 4 - walk rigth, 5 - walk top
-        public Spritesheet.Spritesheet Charapter;
+        public Spritesheet.Spritesheet Charapter = null!;
         static float ShiftX;
         static float ShiftY;
         bool IsColision = false;

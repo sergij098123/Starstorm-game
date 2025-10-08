@@ -13,13 +13,14 @@ using Starstorm.Fonts;
 using Starstorm.Logic;
 using Starstorm.Initialize;
 using Starstorm.Variables;
+using Starstorm.LogF3;
 
 namespace Starstorm.Initialize
 {
     public class Game1Initialize
     {
-        private ContentManager Content;
-        private GraphicsDevice GraphicsDevice;
+        private ContentManager Content = null!;
+        private GraphicsDevice GraphicsDevice = null!;
         public static int screenWidth;
         public static int screenHeight;
         // Метод для ініціалізації з GraphicsDevice
@@ -36,8 +37,10 @@ namespace Starstorm.Initialize
             var Songs = new Songs(Content, serviceProvider);
             Var.StartMenu.Screen.height = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
             Var.StartMenu.Screen.width = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
-            screenWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
-            screenHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
+            //Var.StartMenu.Screen.height = 540;
+            //Var.StartMenu.Screen.width = 960;
+            screenWidth = Var.StartMenu.Screen.width;
+            screenHeight = Var.StartMenu.Screen.height;
 
             Effects.CorrectEffect = Content.Load<SoundEffect>("correct_sfx");
 
@@ -50,8 +53,8 @@ namespace Starstorm.Initialize
                 //),
                 0f,
                 GraphicsDevice.Viewport.Width / (float)StartMenu.BackgroundSprite.texture.Width,    
-                new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), 
-                StartMenu.BackgroundSprite
+                StartMenu.BackgroundSprite,
+                new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height)
                 //Sprites.Sprites.Button.StartMenu.Frame1
             );
 
@@ -59,17 +62,17 @@ namespace Starstorm.Initialize
                 new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8),
                 0f,
                 3.5f,
-                new Rectangle(0,0,screenHeight,screenWidth),
-                //new Rectangle(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height / 2, Sprites.Sprites.Button.StartMenu.Frame1.texture.Width, Sprites.Sprites.Button.StartMenu.Frame1.texture.Height),
-                Sprites.Sprites.Button.StartMenu.Frame1
+                Sprites.Sprites.Button.StartMenu.Frame1,
+                new Rectangle(0,0,screenHeight,screenWidth)
+                //new Rectangle(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height / 2, Sprites.Sprites.Button.StartMenu.Frame1.texture.Width, Sprites.Sprites.Button.StartMenu.Frame1.texture.Height)
                 //StartMenu.BackgroundSprite
             );
             Objects.StartMenu.Button.Button2 = new Objects.Object(
                 new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8),
                 0f,
                 3.5f,
-                new Rectangle(0,0,screenHeight,screenWidth),
-                Sprites.Sprites.Button2.StartMenu.Frame1
+                Sprites.Sprites.Button2.StartMenu.Frame1,
+                new Rectangle(0,0,screenHeight,screenWidth)
             );
             
 
@@ -77,32 +80,32 @@ namespace Starstorm.Initialize
                 new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + screenHeight / 8 * 2.5f),
                 0f,
                 3.5f,
-                new Rectangle(0,0,screenHeight,screenWidth),
-                Sprites.Sprites.Button.StartMenu.Frame1
+                Sprites.Sprites.Button.StartMenu.Frame1,
+                new Rectangle(0,0,screenHeight,screenWidth)
             );
             Objects.StartMenu.Button_2.Button2 = new Objects.Object(
                 new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height + screenHeight / 8 * 2.5f),
                 0f,
                 3.5f,
-                new Rectangle(0,0,screenHeight,screenWidth),
-                Sprites.Sprites.Button2.StartMenu.Frame1
+                Sprites.Sprites.Button2.StartMenu.Frame1,
+                new Rectangle(0,0,screenHeight,screenWidth)
             );
 
             Objects.StartMenu.Button_3.Button1 = new Objects.Object(
                 new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8),
                 0f,
                 3.5f,
-                new Rectangle(0,0,screenHeight,screenWidth),
-                Sprites.Sprites.Button.StartMenu.Frame1
+                Sprites.Sprites.Button.StartMenu.Frame1,
+                new Rectangle(0,0,screenHeight,screenWidth)
             );
             Objects.StartMenu.Button_3.Button2 = new Objects.Object(
                 new Vector2(screenWidth / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Width / 2 * 3.5f, screenHeight / 2 - Sprites.Sprites.Button.StartMenu.Frame1.texture.Height - screenHeight / 8),
                 0f,
                 3.5f,
-                new Rectangle(0,0,screenHeight,screenWidth),
-                Sprites.Sprites.Button2.StartMenu.Frame1
+                Sprites.Sprites.Button2.StartMenu.Frame1,
+                new Rectangle(0,0,screenHeight,screenWidth)
             );
-
+            Log.Print("Sucessfully initialized Game");
             MediaPlayer.Play(Songs.StartMenuBackgroundMusic);
             MediaPlayer.IsRepeating = true; // Для повторення музики
         }

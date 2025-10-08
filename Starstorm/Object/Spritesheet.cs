@@ -62,9 +62,9 @@ namespace Spritesheet
         }
         public void Draw(SpriteBatch _spriteBatch, int screenWidth, int screenHeight)
         {
-            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
+            //spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
             _spriteBatch.Draw(spriteSheet, position, new Rectangle(currentFrame * frameWidth, row * frameHeight, frameWidth, frameHeight), Color.White, 0, Vector2.Zero, Size, Effect, 0);
-            _spriteBatch.End();
+            //_spriteBatch.End();
         }
         public int GetRow()
         {

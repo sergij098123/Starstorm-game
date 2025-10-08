@@ -28,7 +28,7 @@ namespace Starstorm.Variables
             public static bool isMoving = false;
             public static Rectangle Hitbox;
         }
-        public static GameTime GameTime;
+        public static GameTime GameTime = null!;
         public class StartMenu
         {
             public static class Screen
@@ -43,9 +43,12 @@ namespace Starstorm.Variables
         }
         public static class Test
         {
+            public static String LogText = null!;
+            public static bool IsLogShow = false;
             public static Vector2 PlayerShift = new Vector2(0, 0);
         }
         public static string scene = "StartMenu";
         public static bool isExit = false;
+        //int gameResolution = 960 * 540;
     }
 }

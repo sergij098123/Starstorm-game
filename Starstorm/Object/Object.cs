@@ -13,7 +13,7 @@ namespace Starstorm.Objects{
         public float Rotation;
         public float scale;
         public Rectangle rectangle;
-        public Object(Vector2 position, float rotation, float scale, Rectangle rectangle, Sprite.Sprite sprite)
+        public Object(Vector2 position, float rotation, float scale, Sprite.Sprite sprite, Rectangle rectangle = new Rectangle())
         {
             this.Sprite = sprite;
             this.position = position;
@@ -23,18 +23,16 @@ namespace Starstorm.Objects{
         }
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
             spriteBatch.Draw(texture: Sprite.texture,   // Текстура
                 position: position,                     // Позиція
-                sourceRectangle: rectangle,             // Вся текстура
+                sourceRectangle: null,                  // Вся текстура
                 color: Sprite.Color,                    // Колір
                 rotation: Rotation,                     // Кут обертання
                 origin: Vector2.Zero,                   // Точка походження
                 scale: scale,                           // Масштаб
                 effects: Sprite.effect,                 // Без ефектів
                 layerDepth: 0f                          // Глибина шару
-            );
-            spriteBatch.End();                  
+            );              
         }
         public Object Get()
         {
@@ -42,8 +40,8 @@ namespace Starstorm.Objects{
                 this.position,
                 this.Rotation,
                 this.scale,
-                this.rectangle,
-                this.Sprite
+                this.Sprite,
+                this.rectangle
             );
         }
     }

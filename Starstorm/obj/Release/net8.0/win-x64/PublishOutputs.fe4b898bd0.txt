@@ -1,2 +1,0 @@
-D:\Starstorm\Starstorm\bin\Release\net8.0\win-x64\publish\Starstorm.pdb
-D:\Starstorm\Starstorm\bin\Release\net8.0\win-x64\publish\Starstorm.exe
